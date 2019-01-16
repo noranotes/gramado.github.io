@@ -21,7 +21,7 @@ sobre as pastas.
     >>A place for developers.
     search
     docs
-	source codes
+	sorce
 4
 /info
     >>A place for press
