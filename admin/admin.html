@@ -1,0 +1,111 @@
+<!-- #test Obs: os dados solicitados aqui deverão ser comparados com os dados
+armazenados em http://frednora.rdbhost.net/ -->
+<!DOCTYPE html>
+<html id="FredNora" lang="en-US">   
+<head>
+<title>Admin private</title>	
+<meta charset="utf-8"/>
+<meta name="description" content="On this page You will find information about Fred Nora's projetcs on Github."/>
+<meta name="keywords" content="frednora, software, html, css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="author" content="Frederico Martins Nora"/>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="canonical" href="https://frednora.github.io/admin/admin.html"/>	
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" type="text/css" href="https://frednora.github.io/libs/bootstrap.css">
+</head>  
+<!-- initialize function -->
+<body bgcolor="#E6E6FA" onload="adminInitialize()"> 
+    
+<!-- navbar -->  
+
+<nav class = "navbar navbar-default" role = "navigation">
+   
+   <div class = "navbar-header">
+      <a class = "navbar-brand" href = "/index.html">Fred Nora</a>
+   </div>
+   
+   <div>
+      <ul class = "nav navbar-nav">
+         <li class = "active"><a href = "/about">About</a></li>
+		 <li><a href = "/projects">Projects</a></li>
+		 <li><a href = "/links">More ...</a></li>			
+      </ul>
+   </div>
+   
+</nav>
+
+<br>
+
+<div class="container">   
+	
+	<ul class="list-group"> 
+		
+	<li class="list-group-item"> 
+    
+    <!-- Search -->
+    <div class="admin-manage-box" id="admin-form" >	
+	<br>
+    <center><h1 class="adminTitle">// Administrator Page:</h1></center>
+	<br>(Under construction)
+	<br>I'm sorry, but this feature is not fully working. :(
+    <br>This is gonna be a place for blog management. 
+    <br>	
+    <!-- inputs para gerenciar os blogs, 
+		procura o post de acordo com seu número ou de acordo com um marcador. 
+		os resultados podem ser apresentados nos links de resltado de busca.
+	-->	
+	<form class="form-group" name="myForm" action="https://frednora.github.io/admin/showpost.html">
+	<br>
+    <br><input type="text" class="form-control" id="adminPostNumberEditBox"   name="post_number_input"  maxlength="2048" 
+               autocomplete="off" role="combobox" dir="ltr" spellcheck="false" value="post number">
+	<br>	   
+    <br><input type="text" class="form-control" id="getThis"  name="post_tag_input" maxlength="2048" 
+               autocomplete="off" role="combobox" dir="ltr" spellcheck="false" value="tag">
+	<br>	   
+    <br><input type="submit" value="View post" class="btn btn-primary">
+	<br><br>
+    </form>
+    </div>  
+    
+
+	</li>
+	
+	<li class="list-group-item"> 
+    
+    <!-- buttons -->
+    <div id="devil">
+    <!-- <form action="index.html" > -->
+    <form>     
+    <fieldset>
+    <br><legend>Options:</legend>    
+    <button type="button" class="btn btn-secondary" onclick="function1()"> Button 1 </button>
+    <button type="button" class="btn btn-secondary" onclick="function2()"> Button 2 </button>
+    <button type="button" class="btn btn-secondary" onclick="function3()" onmouseover=""> Button 3 </button></p>
+    <br><!-- <input id="numb"><p id="demo">paragrafo teste</p></input> -->
+    <br>
+    </fieldset>
+    </form>
+    </div>
+    
+    </li>	
+
+	<li class="list-group-item"> 
+    <!-- footer -->
+    <div id="footer" align="center">
+	Copyright &copy; 2017 - 
+	<a href="/about/" target="_self" onclick="function1()" >Fred Nora</a> | 
+	<a href="/sitemap.xml" target="_parent" >XML Sitemap</a>     
+    </div>
+	</li>
+	
+	</ul>
+	</div>
+	
+<script src="src/js1.js" type="text/javascript"></script>
+</body>
+</html>

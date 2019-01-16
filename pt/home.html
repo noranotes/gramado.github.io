@@ -1,0 +1,147 @@
+<!-- [HOME] - For internal use only -->
+<!-- This is a client side search engine for frednora.github.io web site. --> 
+<!DOCTYPE html>
+<html id="FredNora" lang="pt-BR">   
+<head>
+<title>Fred Nora - Github</title>
+<meta charset="utf-8"/>
+<meta name="description" content="On this page You will find information about Fred Nora's projetcs on Github."/>
+<meta name="keywords" content="frednora, software, html, css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="author" content="Frederico Martins Nora"/>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<link rel="canonical" href="https://frednora.github.io/pt/home.html"/>
+<link rel="stylesheet" type="text/css" href="https://frednora.github.io/libs/bootstrap.css">
+</head>  
+<body bgcolor="#E6E6FA" onload="gramadoMain()"> 
+
+    <!-- Bar -->  
+
+<nav class = "navbar navbar-default" role = "navigation">
+   
+   <div class = "navbar-header">
+      <a class = "navbar-brand" href = "/index.html">Fred Nora</a>
+   </div>
+   
+   <div>
+      <ul class = "nav navbar-nav">
+         <li class = "active"><a href = "/pt/about">Sobre</a></li>
+		 <li><a href = "/pt/projects">Projetos</a></li>
+		 <li><a href = "/pt/links">Mais ...</a></li>			
+      </ul>
+   </div>
+   
+</nav>
+
+<br>
+	
+	
+	<div class="container">   
+ 
+	
+	<ul class="list-group"> 
+	 
+	<li class="list-group-item"> 
+    <header>  
+	
+	<!-- Login link -->
+	<div id="header-string-links" align="right">
+	<a href="https://frednora.github.io/pt/blog" id="b">Blog</a> | <a href="https://frednora.github.io/pt/admin" id="w">Login</a>
+	</div>
+	
+    <!-- Introduction text 
+    <div class="ux4-thinking-header-string" id="header-string" align="center">
+    <br>
+	<img  class="mb-4" id="w" src="https://frednora.github.io/images/smalltile.png" alt="Summer quote" >    
+    </div>
+	-->
+	
+    </header>
+    </li>
+	
+	
+	<li class="list-group-item">
+    <!-- #Action -->	
+    <div  id="forms" >
+	
+	<!-- Aviso: CANCELANDO A ROTINA DE VALIDAÇÃO POR ENQUANTO, ESTÁ FUNCIONANDO 
+          E ABRINDO A OUTRA URL COM A PESQUISA DESEJADA.A VALIDAÇÃO PODERÁ OCORRER AO ABRIR A OUTRA JANELA,
+        NA HORA DO elemento 'body'	..na outra url a validação está funcionando bem.	  -->
+    <!-- <form name="myForm" onsubmit="return gramado.admin.validateForm()"> -->
+	<form name="myForm" action="https://frednora.github.io/pt/search">
+    <br><span >Buscar:</span>
+    <br>
+    <input class="form-control" type="text" id="getThis" name="search_input"  maxlength="2048" 
+    autocomplete="off" role="combobox" dir="ltr" spellcheck="false">
+    <br>
+    <input class="btn btn-lg btn-primary btn-block" type="submit" value="Search" >
+    <br>
+    </form>
+    </div>   
+    </li>
+	
+	
+	<li class="list-group-item">
+    <br>
+	<!-- #Logic -->	
+    <!-- Options: buttons (More ...) -->
+    <div id="devil">
+      <form>
+          <!-- fieldset com quatro maravilhosos botões, mas somente dois pertencem a essa fase. #game -->   	  
+      <fieldset>
+          <legend>Outros:</legend>    
+	  
+	      <!-- #ux4 I'm so sorry baby -->
+          <!-- <button type="button" onclick="function4()" onmouseover=""> Button 4 </button></p> -->
+	  
+          <!-- #ux3 I'm sorry baby -->
+	      <!-- <button type="button" onclick="function3()" onmouseover=""> Button 3 </button></p> -->	  
+      
+	      <!-- #ux2 Creativity makes the life better. 
+	      How about some arts for a life more colorful ? -->
+	      <button class="form-control" type="button" onclick="gramado.admin.function2()"> Criatividade </button>
+      
+	      <!-- #ux1 \O/ We need some action and a healthy life. 
+          How about some sports exercises every morning for a healthy body ? -->
+	      <button class="form-control" type="button" onclick="gramado.admin.function1()"> >> Ação </button>
+		 
+		 <!-- <button class="ux1-action-buttons" type="button" onclick="gramadoMain()"> >> Run </button> -->
+          
+		  <br>
+      </fieldset>
+      </form>
+    </div> 
+    </li>
+
+	<li class="list-group-item">
+	<!-- #ux2 #C Criativity. -->
+	<!-- Links -->
+    <div align="center" id="devil">
+	<a id="link1" href="http://frednora.github.io/pt/">
+	Divirta-se!</a>
+	</div>
+    </li>
+	
+	
+	<li class="list-group-item">
+	<!-- #ux1 \o/ #D É bom estar com você. -->
+    <!-- footer -->
+    <div align="center" id="devil">
+    <p>Copyright &copy; 2017 &star; 
+	<a class="ux1-action-links" id="devil" href="http://frednora.github.io/pt/about/" target="_self" onclick="gramado.admin.function1()" >Fred Nora</a> | 
+	<a class="ux1-action-links" id="devil" href="http://frednora.github.io/sitemap.xml" target="_parent" >XML Mapa do site</a>     
+    </div>	
+	</li>
+	
+	</ul>
+	</div>
+	
+
+	<script src="http://frednora.github.io/src/gramado.js" type="text/javascript"></script>
+</body>
+</html>

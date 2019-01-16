@@ -1,0 +1,2388 @@
+/* @todo: Essa biblioteca se chamará gramado-blog.css */
+/* Isso é um protótipo. */
+
+/*
+ @todo: Organizar.
+ */
+ 
+ 
+/*
+ +1 Reset.
+ */
+
+
+html,
+    source,
+head,
+    del, 
+body,
+    h1, big, 
+    h2, strong, 
+    h3, div, form, fieldset, iframe, frame, span, ol, ul, li, a, p, 
+    h4, 
+    h5, 
+    h6, small {
+	/*
+	font-size: 100%;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: 0;*/
+}
+
+
+/*
+ +2 Elements.
+ */
+  
+    html {
+        margin:0;
+		border:0;
+        padding:0;
+    }
+
+    head {
+        /* Nothing */     
+    }
+
+    body {
+		content: "";
+		margin-top: 0;
+		border:0;
+        padding:0;
+        background:	#D8D8D8;
+        background-color: #D8D8D8;
+	
+    }
+     
+/*;;;;;;;;;;;;;;;;;;;;*/
+
+    /* Uma moldura para os posts. */
+    section {
+        display: block;
+    }
+
+    /* Uma moldura para um post. */    
+    article {
+        display: block;
+    }
+
+
+
+
+    iframe {
+		float: center;
+        /*margin: 0;*/
+		/*margin-left:11px;
+		margin-right:11px;*/
+		/*border: none;*/
+		/*border-bottom:1px solid #e1e8ed;*/
+        padding-left: 1px;
+        padding-right: 1px;
+		
+		width: 95%;   
+        height: 95%;
+    }	
+	
+    ul.post-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+		
+	   /* 
+	    list-style-image: url('https://frednora.github.io/images/favicon.ico');
+		list-style-position: left; 
+		*/
+    }	
+	
+/*	footer {
+		
+		border:4px solid #e1e8ed;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 15%;		
+	}
+*/
+	 
+/*
+ +3 
+ Typography.
+        Web Typography: 
+		The techniques and strategies used to style and arrange text on a web page. 
+ */
+	
+	/*Emphasized text*/ 
+	em {
+        font-size: 18px;
+        font-weight: bold; 		
+	}
+	
+	font {
+	    /*font-weight: bold; */ 		
+	}
+	
+	strong {
+	    font-weight: bold; 	
+	}
+	
+	a, span {
+		font-size: 16px;
+		color: #3b5998;
+		text-decoration: none;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+	}
+	
+	b {
+		font-size: 14px;
+        font-weight: bold;
+    }
+	
+	cite {
+       font-size: 11px;		
+	}
+	
+    small, dl, dt, dd {
+       font-size: 8px;
+    } 
+ 
+ 
+/* 
+4.0: 
+    Classes globais.
+	ux4-thinking, ux3-logic, ux2-creativity ,ux1-action 
+*/
+ 
+    /* Navigation bar support. */
+    .navigation {
+	    font-size:20px;
+        font-family:'Arial';	
+        margin-left:auto;
+        margin-right:auto;
+        border:1px solid #e1e8ed;
+        border-bottom:1px solid #e1e8ed;
+        float: right;
+        display: block;
+        width:100%;
+        height:60px;
+        background-color:#fff;
+	    text-align:center;
+    }
+
+    .navigation .nav-item {
+        float:left;
+	    display: block;
+	    text-align:center;
+    }
+
+    .navigation .nav-item a {
+        border-right:1px solid #e1e8ed;
+		padding:20px 40px 19px 40px;
+		text-decoration:none;
+        color:#55acee;
+        transition: box-shadow 100ms ease;
+    }
+ 
+    .navigation .nav-item:last-child a{ 
+	    border-right:none; 
+	}
+	
+    .navigation .nav-item a:hover { 
+	    box-shadow: 0 -15px 0 -10px #55acee inset; 
+	} 
+
+	/*
+	 container support.
+	 */
+
+    /*uma moldura para módulos dos posts*/
+    .container-module{
+        margin-left: auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        width: 75%;
+        background-color: #D8D8D8;	
+    } 
+	
+	/*
+	 Primary area support. (posts)
+	 */
+	
+
+    /* todos os posts ficam em apenas uma section*/
+    .all-posts-area {
+        font-size:18px;
+        font-family:'Arial';
+        margin-left:auto;
+        margin-right:auto;
+        /*border: 2px solid #c3c3c3;*/
+        width: 75%;
+        height: 2000px;
+        text-align:center;
+		
+       /* background-color: #e9e9ed; */ 
+
+		overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+		
+		position: relative;
+    } 
+    
+    /*Módulos onde os posts serão apresentados em /blog/index.html */
+    .post-module {
+	    font-size:18px;
+        font-family:'Arial';
+        margin-left:auto;
+        margin-right:auto;
+        border: 1px solid #d8d8d8;	 
+		background: White;
+        position: relative;		
+        width: 90%;
+        height: 40%;
+		/*
+    background-color: #00FF00;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+	*/
+    }
+	
+    .post-list {
+		
+	}
+	
+    .post-flag {
+        
+		font-size: 13px;		
+        font-family: "Lucida Grande", arial, sans-serif;
+        font-weight: normal;
+
+		/* My border */
+		border: 1px solid #8D8D8D; 
+		border-top: 1px solid #8D8D8D; 
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: #8D8D8D; 
+	    border-bottom: 1px solid #8D8D8D; 
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #8D8D8D; 
+
+		/* Radius 8px. It's more 'O' corner */
+	    border-radius: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 8px;		
+        border-bottom-right-radius: 8px;
+	
+	    /* height 8px  width 8px*/
+        padding: 8px 11px;
+        padding-top: 8px;
+        padding-right: 11px;
+        padding-bottom: 8px;
+        padding-left: 11px;
+        
+		/* Position x, y, x*/
+		position: absolute;
+        left: -11px;
+        top: 11px;
+        z-index: 88;
+		
+		/* Font color */
+        color: #fff;
+		
+	    background-color: #6D6D6D; /* #3b5998; */
+	
+	    /* My cool shadow */
+	    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    }	
+
+    /*
+	 Secondary area support. (widgets.
+	 */	
+	
+	
+    /*área para links*/
+    .widget-area{
+        /*background: #e9e9ed;*/    
+    }  
+
+    .widget{
+        text-align:left; 
+    }
+
+    .widget-title{
+        font-size:21px;
+        font-family: 'Arial';
+        color: blue;
+        text-align:left; 		
+    }
+	
+    .widget-link{
+        font-size:21px;
+        font-family: 'Arial';
+        font-color: Gray;
+        text-align:left; 		
+    }
+
+	
+    /*
+	    ?? Outros
+	*/
+    .hrClass{
+	    float: center;
+        color: #404040;	
+	    width: 33%;
+    }
+	
+    .v-center {
+        text-align:center;
+        position:relative;
+        top:50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+    }		
+
+	.searchEditBox {
+	    width: 240px; 
+		height: 34px; 
+		padding: 1px;
+	}
+	
+	.searchButton {
+        font-size: 14px;
+	    font-family: arial,sans-serif;
+        font-weight: bold;
+		padding: 1px;
+		width: 125px; 
+		height: 36px; 
+        color: #757575; 		
+	}
+	
+	.searchButton:hover {
+        font-size: 14px;
+	    font-family: arial,sans-serif;
+		font-weight: bold;
+		padding: 1px;
+		width: 125px; 
+		height: 36px; 
+		color: #000000;
+    }
+
+	
+    /* Box onde os resultados da pesquis são apresentados.*/
+    .search-results-list-box{
+	
+	}
+ 
+    /* Uma lista de resultados de pesquisa */
+    .search-results-list {
+	 
+    }	
+	
+	/*feed icon stuff*/
+    .feed {
+        margin-left: 1px;
+        padding-left: 1px;
+    }
+
+	/*
+    .footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        background-color: #efefef;
+        text-align: center;
+    }
+	*/
+	
+	/*.container-module:after  {
+        content: "";
+        display: block;
+    }
+	
+    .footer, .container-module:after {
+        height: 1000px;		
+    }
+	*/
+	
+	/*global footer*/
+    .footer {
+		
+		/*border: solid 2px Gray;*/
+		/*border-bottom: 8px solid #91D2FA;*/
+	    width: 100%;
+        display: block;	
+        text-align: center;		
+	}		
+	
+
+   /*ids*/
+
+
+    /* esses ids devem ir para dentro do tamanho das midias apropriadas.*/ 
+    #forms { 
+	    margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    text-align: left; 
+	}
+	
+	#resultLinks {
+	    margin-left:auto;
+		padding:20px 40px 19px 40px;
+	}
+	
+    #buttons { 
+	    text-align: center; 
+	}
+	
+	/*global*/
+    /*
+	#footer { 
+		font-size: 12pt;
+        font-family: Arial,sans-serif;
+        font-weight: bold;	
+        border: solid 2px Gray;
+        border-bottom: 8px solid #91D2FA;
+		
+		position:fixed;
+        
+		left:0px;
+        top: 95%;
+		bottom:0px;
+	    width:100%;
+		height:5%;
+	    background-color: #cecece;
+        color:Black;
+        text-align: center;        
+
+    }*/
+	
+
+	
+	
+/*
+ +5
+ ************************************ @media MAX *******************************     
+ DAQUI PRA FRENTE É O @media SUPPORT.
+ PODE PARECER FORA DE ORDEM PORQUE AS DIFERENÇAS DE MÍDIA
+ DEVEM AFETAR VÁRIAS CLASSES.
+ ?? Quais serão as características de acordo com o tamanho da tela do dispositivo. ??
+ */
+	
+
+@media screen and (max-width: 319px) {	
+    iframe {display:none;}
+
+    #main-container {
+        float: center;
+        width: 100%;
+    }
+	
+    #header-string { 
+	    font-size: 11px;
+		margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    color: #6D6D6D;
+        text-align: center;		
+	}
+
+    #footer { 
+        display:none; 
+    }
+
+    h1 { font-size: 11px; }	
+}	
+	
+@media screen and (max-width: 479px) { 
+    iframe {display:none;}
+	
+    #main-container {
+        float: center;
+        width: 100%;
+    }
+
+    #header-string { 
+	    font-size: 12px;
+		margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    color: #6D6D6D;
+        text-align: center;		
+	}
+
+    #footer { 
+        display:none; 
+    }
+	
+    h1 { font-size: 12px; }	
+}		
+	
+@media screen and (max-width: 639px) { 
+    iframe {display:none;}
+	
+    #main-container {
+        float: center;
+        width: 100%;
+    }
+    
+	#header-string { 
+	    font-size: 13px;
+		margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    color: #6D6D6D;
+        text-align: center;		
+	}
+	
+    #footer { 
+        display:none; 
+    }
+	
+    h1 { font-size: 13px; }		
+}	
+	
+@media screen and (max-width: 799px) { 
+    iframe {display:none;}
+	
+    #main-container {
+        float: center;
+        width: 100%;
+    }
+	
+    #header-string { 
+	    font-size: 14px;
+		margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    color: #6D6D6D;
+        text-align: center;		
+	}
+	
+    #footer { 
+        display:none; 
+    }
+	
+    h1 { font-size: 14px; }		
+}	
+
+
+@media screen and (max-width: 1023px) { 
+
+    /*uma moldura para módulos dos posts*/
+    .container-module{
+        margin-left: auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        width: 90%;
+        background-color: #D8D8D8;	
+    } 
+	
+	.post-module {	
+	    font-size:18px;
+        font-family:'Arial';
+		background: White;
+        position: relative;		
+        width: 90%;
+        height: auto; 
+        margin-left:auto;
+        margin-right:auto;
+        border: 1px solid #d8d8d8;
+        float: center;		
+	}
+
+    #main-container {
+        float: center;
+        width: 100%;
+    }
+	
+    #footer { 
+        display:none; 
+    }
+}
+
+	
+/* 
+ When the screen is less than 1024 pixels wide, hide all links, except for 
+ the first one ("menu"). Show the link that contains should open and close 
+ the navbar (.icon) 
+ */
+/*@media screen and (max-width: 1023px) {*/
+@media screen and (max-width: 1365px) {		
+	   
+    .navigation .nav-item:not(:first-child) {display: none;}
+    .navigation a.icon {
+        float: left;
+        display: block;
+    }
+	
+	
+    .all-posts-area { 
+	
+        font-size:18px;
+        font-family:'Arial';
+        font-weight: normal;
+		
+        margin-top: 1px;
+        margin-bottom: 1px;
+        margin-left: 1px;
+        margin-right: 1px;
+		
+		/*
+        margin-left:auto;
+        margin-right:auto;
+        */
+		
+		border: 1px solid #E7E7E7;
+		/*border: 2px solid #c3c3c3;*/
+        
+		
+        padding-left: 8%;
+        padding-right: 8%;		
+		
+		float: center;
+		
+		display: inline-block;
+		
+		text-align:center;  
+        /*background-color: #e9e9ed;*/
+        
+
+		width: auto;
+        height: 2000px;
+
+		overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+		
+		position: relative;		
+	}
+	
+	.post-module {	
+	    font-size:18px;
+        font-family:'Arial';
+		background: White;
+        position: relative;		
+        width: auto;
+        height: auto; 
+        margin-left:auto;
+        margin-right:auto;
+        border: 1px solid #d8d8d8;
+        float: center;		
+	}
+	
+	.widget-area {
+		display:none;	 
+	}
+	
+    #header-string { 
+	    font-size: 14px;
+		margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    color: #6D6D6D;
+        text-align: center;		
+	}	
+	
+    #main-container {
+        float: center;
+        width: 100%;
+    }
+
+    #primary {  
+        
+		float: center;
+        width: auto;
+        box-sizing: border-box;
+   
+    /* margin: 48px 0; */
+    /* margin-top: 48px; */
+    /* margin-right: 0px; */
+    /* margin-bottom: 48px; */
+    /* margin-left: 0px; */
+    /*padding-right: 48px;*/
+
+        padding-left: 8%;
+        padding-right: 8%;
+
+        left: 0;
+        right: 0;		
+		
+		width: 100%;
+	}
+	
+    #secondary { 
+        display:none; 
+    }
+	
+    #footer { 
+        display:none; 
+    }
+	
+	center { width: 100%;}
+	
+	img {	
+	    width: 25%;   
+        height: 25%;		
+	}
+    h1 { font-size: 14px; }	
+}
+
+/* 
+ The "responsive" class is added to the navbar with JavaScript 
+when the user clicks on the icon. 
+This class makes the navbar look good on small screens 
+(display the links vertically instead of horizontally) 
+*/
+/*@media screen and (max-width: 1023px) {*/
+@media screen and (max-width: 1365px) {	
+	
+    .responsive {
+	    position: relative;
+	}
+	
+    .responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;	
+    }
+	
+    .responsive .nav-item:first-child {
+	    font-size: 16px;
+		font-family: arial, sans-serif;
+		font-weight: normal;
+		display: none;
+	}		
+	
+    .responsive .nav-item a {
+        border:1px solid #e1e8ed;
+        border-bottom:1px solid #e1e8ed;
+        float: none;
+        display: block;
+        text-align: left;
+        background-color:#fff;
+    }
+	
+    .responsive .nav-item a:hover { 
+	    box-shadow: 0 -15px 0 -10px #55acee inset; 
+	}
+
+    #main-container {
+        float: center;
+        width: 100%;
+    }	
+}
+
+
+
+
+
+/*
+ +6
+ ************************************ @media MIN *******************************     
+ */
+ 
+@media screen and (min-width: 320px) { 
+}
+ 
+@media screen and (min-width: 480px) { 
+
+} 
+
+@media screen and (min-width: 640px) { 
+
+}
+ 
+@media screen and (min-width: 720px) { 
+
+}  
+
+
+@media screen and (min-width: 800px) { 
+
+}  
+
+
+@media screen and (min-width: 1024px) { 
+	/*reset  screen */
+html,
+    source,
+head,
+    del, 
+body,
+    h1, big, 
+    h2, strong, 
+    h3, div, form, fieldset, iframe, frame, span, ol, ul, li, a, p, 
+    h4, 
+    h5, 
+    h6, small {
+	
+	font-size: 16px;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: 0;
+}
+	
+
+    iframe {
+		float: center;
+        /*margin: 0;*/
+		/*margin-left:11px;
+		margin-right:11px;*/
+		/*border: none;*/
+		/*border-bottom:1px solid #e1e8ed;*/
+        padding-left: 10px;
+        padding-right: 10px;
+		
+		width: 95%;   
+        height: 95%;
+    }		
+	
+	/*Typography. big screen*/
+	
+	/*Emphasized text*/ 
+	em {
+        font-size: 16px;
+        font-weight: bold; 		
+	}
+	
+	font {
+	    /*font-weight: bold; */ 		
+	}
+	
+	strong {
+	    font-weight: bold; 	
+	}
+	
+	a, span {
+		font-size: 16px;
+		color: #3b5998;
+		text-decoration: none;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+	}
+	
+	b {
+		font-size: 16px;
+        font-weight: bold;
+    }
+	
+	cite {
+       font-size: 16px;		
+	}
+	
+    small, dl, dt, dd {
+       font-size: 14px;
+    } 
+	
+}  
+
+@media screen and (min-width: 1280px) {
+
+	/*reset big screen */
+html,
+    source,
+head,
+    del, 
+body,
+    h1, big, 
+    h2, strong, 
+    h3, div, form, fieldset, iframe, frame, span, ol, ul, li, a, p, 
+    h4, 
+    h5, 
+    h6, small {
+	
+	font-size: 21px;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: 0;
+}
+	
+
+    iframe {
+		float: center;
+        /*margin: 0;*/
+		/*margin-left:11px;
+		margin-right:11px;*/
+		/*border: none;*/
+		/*border-bottom:1px solid #e1e8ed;*/
+        padding-left: 10px;
+        padding-right: 10px;
+		
+		width: 95%;   
+        height: 95%;
+    }		
+	
+	/*Typography. big screen*/
+	
+	/*Emphasized text*/ 
+	em {
+        font-size: 21px;
+        font-weight: bold; 		
+	}
+	
+	font {
+	    /*font-weight: bold; */ 		
+	}
+	
+	strong {
+	    font-weight: bold; 	
+	}
+	
+	a, span {
+		font-size: 21px;
+		color: #3b5998;
+		text-decoration: none;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+	}
+	
+	b {
+		font-size: 21px;
+        font-weight: bold;
+    }
+	
+	cite {
+       font-size: 21px;		
+	}
+	
+    small, dl, dt, dd {
+       font-size: 20px;
+    } 
+	
+
+	
+
+    /*uma moldura para módulos dos posts*/
+    .container-module{
+        margin-left: auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        width: 75%;
+        background-color: #D8D8D8;	
+    } 
+	
+	/*.post-module {	
+	    font-size:20px;
+        font-family:'Arial';
+		background: White;
+        position: relative;		
+        width: auto;
+        height: auto; 
+        margin-left:auto;
+        margin-right:auto;
+        border: 1px solid #d8d8d8;
+        float: center;		
+	}
+
+    .post-flag {        
+		font-size: 20px;		
+        font-family: "Lucida Grande", arial, sans-serif;
+        font-weight: bold;
+    }	*/
+
+    #header-string { 
+	    font-size: 21px;
+		margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    color: #6D6D6D;
+        text-align: center;		
+	}		
+	
+	/* primary area support */ 
+
+    /* Box para os posts. */
+    #primary {
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+   
+        /* margin: 48px 0; */
+        /* margin-top: 48px; */
+        /* margin-right: 0px; */
+        /* margin-bottom: 48px; */
+        /* margin-left: 0px; */
+        /* padding-right: 48px;*/
+    }
+	
+    #post-link {
+        font-size: 21px;
+        font-family: arial,sans-serif;
+        font-weight: bold;
+        color: #4d5664;
+    }		
+	
+   /* secondary area support */ 	
+    
+	/* Box para os widgets. */
+    #secondary {
+        float: right;
+        width: 320px;
+        box-sizing: border-box;
+    
+        /* margin: 48px 0; */
+        /* margin-top: 48px; */
+        /* margin-right: 0px; */
+        /* margin-bottom: 48px; */
+        /* margin-left: 0px; */
+        /* padding-right: 48px;*/
+    }
+
+    #secondary h3 {
+		font-size: 21px;
+        font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+        margin: 30px 0 23px;
+        margin-left: 0px;	
+	    margin-top: 30px;
+        margin-right: 0px;
+        margin-bottom: 23px;
+        line-height: 1em;
+        color: #111122;
+    }
+    h1 { font-size: 21px; }	
+}
+
+ 
+ 
+/*Responsive for large width, hide menu itens.*/
+/*@media screen and (min-width: 1023px){*/
+@media screen and (min-width: 1366px){	
+
+	/*reset big screen */
+html,
+    source,
+head,
+    del, 
+body,
+    h1, big, 
+    h2, strong, 
+    h3, div, form, fieldset, iframe, frame, span, ol, ul, li, a, p, 
+    h4, 
+    h5, 
+    h6, small {
+	
+	font-size: 21px;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: 0;
+}
+	
+
+    iframe {
+		float: center;
+        /*margin: 0;*/
+		/*margin-left:11px;
+		margin-right:11px;*/
+		/*border: none;*/
+		/*border-bottom:1px solid #e1e8ed;*/
+        padding-left: 10px;
+        padding-right: 10px;
+		
+		width: 95%;   
+        height: 95%;
+    }		
+	
+	/*Typography. big screen*/
+	
+	/*Emphasized text*/ 
+	em {
+        font-size: 21px;
+        font-weight: bold; 		
+	}
+	
+	font {
+	    /*font-weight: bold; */ 		
+	}
+	
+	strong {
+	    font-weight: bold; 	
+	}
+	
+	a, span {
+		font-size: 21px;
+		color: #3b5998;
+		text-decoration: none;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+	}
+	
+	b {
+		font-size: 21px;
+        font-weight: bold;
+    }
+	
+	cite {
+       font-size: 21px;		
+	}
+	
+    small, dl, dt, dd {
+       font-size: 20px;
+    } 
+	
+
+    
+	.navigation .nav-item:first-child {
+	    display: none;
+	}
+	
+    .responsive {
+	    font-size:21px;
+        font-family:'Arial';
+        margin-left:auto;
+        margin-right:auto;
+        border:1px solid #e1e8ed;
+        border-bottom:1px solid #e1e8ed;		
+        float: right;
+        display: block;	
+        width:100%;
+        height:60px;
+        background-color:#fff;
+	    text-align:center;
+    }
+   
+    .responsive .nav-item:not(:first-child) {
+		display: none;
+	}
+	
+    .responsive a.icon { 
+	    float: left; 
+		display: block; 
+	}
+	
+    .responsive .nav-item {
+        float:left;
+	    display: block;
+	    text-align:center;
+    }
+	
+    .responsive .nav-item a {
+        border-right:1px solid #e1e8ed;		
+        padding:20px 40px 19px 40px;
+        text-decoration:none;
+        color:#55acee;
+        transition: box-shadow 100ms ease;
+    }
+	
+    .responsive .nav-item:last-child a{ 
+	    border-right:none; 
+	}
+	
+    .responsive .nav-item a:hover { 
+	    box-shadow: 0 -15px 0 -10px #55acee inset; 
+	} 
+	
+	
+    /*uma moldura para módulos dos posts*/
+    .container-module{
+        margin-left: auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        width: 75%;
+        background-color: #D8D8D8;	
+    } 
+	
+    #header-string { 
+	    font-size: 21px;
+		margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    color: #6D6D6D;
+        text-align: center;		
+	}	
+	
+	/* primary area support */ 
+
+    /* Box para os posts. */
+    #primary {
+        float: left;
+        width: 480px;
+        box-sizing: border-box;
+   
+        /* margin: 48px 0; */
+        /* margin-top: 48px; */
+        /* margin-right: 0px; */
+        /* margin-bottom: 48px; */
+        /* margin-left: 0px; */
+        /* padding-right: 48px;*/
+    }
+	
+    #post-link {
+        font-size: 21px;
+        font-family: arial,sans-serif;
+        font-weight: bold;
+        color: #4d5664;
+    }	
+	
+	
+    /* secondary area support */ 	
+    
+	/* Box para os widgets. */
+    #secondary {
+        float: right;
+        width: 320px;
+        box-sizing: border-box;
+    
+        /* margin: 48px 0; */
+        /* margin-top: 48px; */
+        /* margin-right: 0px; */
+        /* margin-bottom: 48px; */
+        /* margin-left: 0px; */
+        /* padding-right: 48px;*/
+    }
+
+    #secondary h3 {
+		font-size: 21px;
+        font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+        margin: 30px 0 23px;
+        margin-left: 0px;	
+	    margin-top: 30px;
+        margin-right: 0px;
+        margin-bottom: 23px;
+        line-height: 1em;
+        color: #111122;
+    }
+	
+    h1 { font-size: 21px; }		
+}
+
+
+/**
+ Essa resolução é o dicisor de águas nos tempos de hoje. #2017
+ **/
+@media screen and (min-width: 1366px) { 
+
+	/*reset big screen */
+html,
+    source,
+head,
+    del, 
+body,
+    h1, big, 
+    h2, strong, 
+    h3, div, form, fieldset, iframe, frame, span, ol, ul, li, a, p, 
+    h4, 
+    h5, 
+    h6, small {
+	
+	font-size: 21px;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: 0;
+}
+	
+
+    iframe {
+		float: center;
+        /*margin: 0;*/
+		/*margin-left:11px;
+		margin-right:11px;*/
+		/*border: none;*/
+		/*border-bottom:1px solid #e1e8ed;*/
+        padding-left: 10px;
+        padding-right: 10px;
+		
+		width: 95%;   
+        height: 95%;
+    }		
+	
+	/*Typography. big screen*/
+	
+	/*Emphasized text*/ 
+	em {
+        font-size: 21px;
+        font-weight: bold; 		
+	}
+	
+	font {
+	    /*font-weight: bold; */ 		
+	}
+	
+	strong {
+	    font-weight: bold; 	
+	}
+	
+	a, span {
+		font-size: 21px;
+		color: #3b5998;
+		text-decoration: none;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+	}
+	
+	b {
+		font-size: 21px;
+        font-weight: bold;
+    }
+	
+	cite {
+       font-size: 21px;		
+	}
+	
+    small, dl, dt, dd {
+       font-size: 20px;
+    } 
+	
+
+
+    /*uma moldura para módulos dos posts*/
+    .container-module{
+        margin-left: auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        width: 75%;
+        background-color: #D8D8D8;	
+    } 
+	
+	/*.post-module {	
+	    font-size:20px;
+        font-family:'Arial';
+		background: White;
+        position: relative;		
+        width: auto;
+        height: auto; 
+        margin-left:auto;
+        margin-right:auto;
+        border: 1px solid #d8d8d8;
+        float: center;		
+	}
+
+    .post-flag {        
+		font-size: 20px;		
+        font-family: "Lucida Grande", arial, sans-serif;
+        font-weight: bold;
+    }	
+	*/
+    #header-string { 
+	    font-size: 21px;
+		margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    color: #6D6D6D;
+        text-align: center;		
+	}		
+	
+   /* secondary area support */ 	
+    
+	/* Box para os widgets. */
+    #secondary {
+        float: right;
+        width: 320px;
+        box-sizing: border-box;
+    
+        /* margin: 48px 0; */
+        /* margin-top: 48px; */
+        /* margin-right: 0px; */
+        /* margin-bottom: 48px; */
+        /* margin-left: 0px; */
+        /* padding-right: 48px;*/
+    }
+
+    #secondary h3 {
+		font-size: 21px;
+        font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+        margin: 30px 0 23px;
+        margin-left: 0px;	
+	    margin-top: 30px;
+        margin-right: 0px;
+        margin-bottom: 23px;
+        line-height: 1em;
+        color: #111122;
+    }
+    h1 { font-size: 21px; }	
+}
+
+@media screen and (min-width: 1440px) { 
+
+	/*reset big screen */
+html,
+    source,
+head,
+    del, 
+body,
+    h1, big, 
+    h2, strong, 
+    h3, div, form, fieldset, iframe, frame, span, ol, ul, li, a, p, 
+    h4, 
+    h5, 
+    h6, small {
+	
+	font-size: 28px;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: 0;
+}
+	
+
+    iframe {
+		float: center;
+        /*margin: 0;*/
+		/*margin-left:11px;
+		margin-right:11px;*/
+		/*border: none;*/
+		/*border-bottom:1px solid #e1e8ed;*/
+        padding-left: 10px;
+        padding-right: 10px;
+		
+		width: 95%;   
+        height: 95%;
+    }		
+	
+	/*Typography. big screen*/
+	
+	/*Emphasized text*/ 
+	em {
+        font-size: 28px;
+        font-weight: bold; 		
+	}
+	
+	font {
+	    /*font-weight: bold; */ 		
+	}
+	
+	strong {
+	    font-weight: bold; 	
+	}
+	
+	a, span {
+		font-size: 28px;
+		color: #3b5998;
+		text-decoration: none;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+	}
+	
+	b {
+		font-size: 28px;
+        font-weight: bold;
+    }
+	
+	cite {
+       font-size: 28px;		
+	}
+	
+    small, dl, dt, dd {
+       font-size: 26px;
+    } 
+	
+    
+	#b { 
+        font-size: 28px;
+        font-family: arial, sans-serif;
+        font-weight: normal;
+	}
+    
+	#w {
+        font-size: 28px;
+        font-family: arial, sans-serif;
+        font-weight: normal;
+	}
+    
+	#ux4 {
+        font-size: 28px;
+        font-family: arial, sans-serif;
+        font-weight: normal;
+	}
+	
+    #devil { 
+	    font-size: 28px;
+		font-family: arial, sans-serif;
+        font-weight: normal;	
+	}	
+} 
+
+@media screen and (min-width: 1600px) { 
+
+	/*reset big screen */
+html,
+    source,
+head,
+    del, 
+body,
+    h1, big, 
+    h2, strong, 
+    h3, div, form, fieldset, iframe, frame, span, ol, ul, li, a, p, 
+    h4, 
+    h5, 
+    h6, small {
+	
+	font-size: 28px;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: 0;
+}
+	
+
+    iframe {
+		float: center;
+        /*margin: 0;*/
+		/*margin-left:11px;
+		margin-right:11px;*/
+		/*border: none;*/
+		/*border-bottom:1px solid #e1e8ed;*/
+        padding-left: 10px;
+        padding-right: 10px;
+		
+		width: 95%;   
+        height: 95%;
+    }		
+	
+	/*Typography. big screen*/
+	
+	/*Emphasized text*/ 
+	em {
+        font-size: 28px;
+        font-weight: bold; 		
+	}
+	
+	font {
+	    /*font-weight: bold; */ 		
+	}
+	
+	strong {
+	    font-weight: bold; 	
+	}
+	
+	a, span {
+		font-size: 28px;
+		color: #3b5998;
+		text-decoration: none;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+	}
+	
+	b {
+		font-size: 28px;
+        font-weight: bold;
+    }
+	
+	cite {
+       font-size: 28px;		
+	}
+	
+    small, dl, dt, dd {
+       font-size: 26px;
+    } 
+	
+
+    /*uma moldura para módulos dos posts*/
+    .container-module{
+        margin-left: auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        width: 75%;
+        background-color: #D8D8D8;	
+    } 
+	
+	/*.post-module {	
+	    font-size:28px;
+        font-family:'Arial';
+		background: White;
+        position: relative;		
+        width: auto;
+        height: auto; 
+        margin-left:auto;
+        margin-right:auto;
+        border: 1px solid #d8d8d8;
+        float: center;		
+	}
+
+    .post-flag {        
+		font-size: 28px;		
+        font-family: "Lucida Grande", arial, sans-serif;
+        font-weight: bold;
+    }	
+	*/
+    #header-string { 
+	    font-size: 28px;
+		margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    color: #6D6D6D;
+        text-align: center;		
+	}		
+	
+   /* secondary area support */ 	
+    
+	/* Box para os widgets. */
+    #secondary {
+        float: right;
+        width: 320px;
+        box-sizing: border-box;
+    
+        /* margin: 48px 0; */
+        /* margin-top: 48px; */
+        /* margin-right: 0px; */
+        /* margin-bottom: 48px; */
+        /* margin-left: 0px; */
+        /* padding-right: 48px;*/
+    }
+
+    #secondary h3 {
+		font-size: 28px;
+        font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+        margin: 30px 0 23px;
+        margin-left: 0px;	
+	    margin-top: 30px;
+        margin-right: 0px;
+        margin-bottom: 23px;
+        line-height: 1em;
+        color: #111122;
+    }
+	
+    h1 { font-size: 28px; }	
+}
+
+
+@media screen and (min-width: 1920px) { 
+
+	/*reset big screen */
+html,
+    source,
+head,
+    del, 
+body,
+    h1, big, 
+    h2, strong, 
+    h3, div, form, fieldset, iframe, frame, span, ol, ul, li, a, p, 
+    h4, 
+    h5, 
+    h6, small {
+	
+	font-size: 36px;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: 0;
+}
+	
+
+    iframe {
+		float: center;
+        /*margin: 0;*/
+		/*margin-left:11px;
+		margin-right:11px;*/
+		/*border: none;*/
+		/*border-bottom:1px solid #e1e8ed;*/
+        padding-left: 10px;
+        padding-right: 10px;
+		
+		width: 95%;   
+        height: 95%;
+    }		
+	
+	/*Typography. big screen*/
+	
+	/*Emphasized text*/ 
+	em {
+        font-size: 36px;
+        font-weight: bold; 		
+	}
+	
+	font {
+	    /*font-weight: bold; */ 		
+	}
+	
+	strong {
+	    font-weight: bold; 	
+	}
+	
+	a, span {
+		font-size: 36px;
+		color: #3b5998;
+		text-decoration: none;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+	}
+	
+	b {
+		font-size: 36px;
+        font-weight: bold;
+    }
+	
+	cite {
+       font-size: 36px;		
+	}
+	
+    small, dl, dt, dd {
+       font-size: 34px;
+    } 
+	
+	
+
+    /*uma moldura para módulos dos posts*/
+    .container-module{
+        margin-left: auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        width: 75%;
+        background-color: #D8D8D8;	
+    } 
+	
+	/*.post-module {	
+	    font-size:28px;
+        font-family:'Arial';
+		background: White;
+        position: relative;		
+        width: auto;
+        height: auto; 
+        margin-left:auto;
+        margin-right:auto;
+        border: 1px solid #d8d8d8;
+        float: center;		
+	}
+
+    .post-flag {        
+		font-size: 28px;		
+        font-family: "Lucida Grande", arial, sans-serif;
+        font-weight: bold;
+    }	
+	*/
+    #header-string { 
+	    font-size: 36px;
+		margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    color: #6D6D6D;
+        text-align: center;		
+	}		
+	
+   /* secondary area support */ 	
+    
+	/* Box para os widgets. */
+    #secondary {
+        float: right;
+        width: 320px;
+        box-sizing: border-box;
+    
+        /* margin: 48px 0; */
+        /* margin-top: 48px; */
+        /* margin-right: 0px; */
+        /* margin-bottom: 48px; */
+        /* margin-left: 0px; */
+        /* padding-right: 48px;*/
+    }
+
+    #secondary h3 {
+		font-size: 36px;
+        font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+        margin: 30px 0 23px;
+        margin-left: 0px;	
+	    margin-top: 30px;
+        margin-right: 0px;
+        margin-bottom: 23px;
+        line-height: 1em;
+        color: #111122;
+    }
+	
+    h1 { font-size: 36px; }	
+}
+
+@media screen and (min-width: 2048px) {
+	
+	/*reset big screen */
+html,
+    source,
+head,
+    del, 
+body,
+    h1, big, 
+    h2, strong, 
+    h3, div, form, fieldset, iframe, frame, span, ol, ul, li, a, p, 
+    h4, 
+    h5, 
+    h6, small {
+	
+	font-size: 38px;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: 0;
+}
+	
+
+    iframe {
+		float: center;
+        /*margin: 0;*/
+		/*margin-left:11px;
+		margin-right:11px;*/
+		/*border: none;*/
+		/*border-bottom:1px solid #e1e8ed;*/
+        padding-left: 10px;
+        padding-right: 10px;
+		
+		width: 95%;   
+        height: 95%;
+    }		
+	
+	/*Typography. big screen*/
+	
+	/*Emphasized text*/ 
+	em {
+        font-size: 38px;
+        font-weight: bold; 		
+	}
+	
+	font {
+	    /*font-weight: bold; */ 		
+	}
+	
+	strong {
+	    font-weight: bold; 	
+	}
+	
+	a, span {
+		font-size: 38px;
+		color: #3b5998;
+		text-decoration: none;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+	}
+	
+	b {
+		font-size: 38px;
+        font-weight: bold;
+    }
+	
+	cite {
+       font-size: 38px;		
+	}
+	
+    small, dl, dt, dd {
+       font-size: 36px;
+    } 
+	
+	
+	
+    /*uma moldura para módulos dos posts*/
+    .container-module{
+        margin-left: auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        width: 75%;
+        background-color: #D8D8D8;	
+    } 
+	
+	/*.post-module {	
+	    font-size:38px;
+        font-family:'Arial';
+		background: White;
+        position: relative;		
+        width: auto;
+        height: auto; 
+        margin-left:auto;
+        margin-right:auto;
+        border: 1px solid #d8d8d8;
+        float: center;		
+	}
+	
+    .post-flag {        
+		font-size: 38px;		
+        font-family: "Lucida Grande", arial, sans-serif;
+        font-weight: bold;
+    }		
+*/
+	
+    #header-string { 
+	    font-size: 38px;
+		margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    color: #6D6D6D;
+        text-align: center;		
+	}		
+	
+	/* primary area support */ 
+
+    /* Box para os posts. */
+    #primary {
+        float: left;
+        width: 600px;
+        box-sizing: border-box;
+   
+        /* margin: 48px 0; */
+        /* margin-top: 48px; */
+        /* margin-right: 0px; */
+        /* margin-bottom: 48px; */
+        /* margin-left: 0px; */
+        /* padding-right: 48px;*/
+    }
+	
+    #post-link {
+        font-size: 38px;
+        font-family: arial,sans-serif;
+        font-weight: bold;
+        color: #4d5664;
+    }		
+	
+   /* secondary area support */ 	
+    
+	/* Box para os widgets. */
+    #secondary {
+		font-size: 38px;
+        font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;		
+        float: right;
+        width: 600px;
+        box-sizing: border-box;
+    
+        /* margin: 48px 0; */
+        /* margin-top: 48px; */
+        /* margin-right: 0px; */
+        /* margin-bottom: 48px; */
+        /* margin-left: 0px; */
+        /* padding-right: 48px;*/
+    }
+
+    #secondary h3 {
+		font-size: 38px;
+        font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+        margin: 30px 0 23px;
+        margin-left: 0px;	
+	    margin-top: 30px;
+        margin-right: 0px;
+        margin-bottom: 23px;
+        line-height: 1em;
+        color: #111122;
+    }
+	
+    h1 { font-size: 38px; }	
+}
+
+
+@media screen and (min-width: 2560px) { 
+
+	/*reset big screen */
+html,
+    source,
+head,
+    del, 
+body,
+    h1, big, 
+    h2, strong, 
+    h3, div, form, fieldset, iframe, frame, span, ol, ul, li, a, p, 
+    h4, 
+    h5, 
+    h6, small {
+	
+	font-size: 40px;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: 0;
+}
+	
+
+    iframe {
+		float: center;
+        /*margin: 0;*/
+		/*margin-left:11px;
+		margin-right:11px;*/
+		/*border: none;*/
+		/*border-bottom:1px solid #e1e8ed;*/
+        padding-left: 10px;
+        padding-right: 10px;
+		
+		width: 95%;   
+        height: 95%;
+    }		
+	
+	/*Typography. big screen*/
+	
+	/*Emphasized text*/ 
+	em {
+        font-size: 40px;
+        font-weight: bold; 		
+	}
+	
+	font {
+	    /*font-weight: bold; */ 		
+	}
+	
+	strong {
+	    font-weight: bold; 	
+	}
+	
+	a, span {
+		font-size: 40px;
+		color: #3b5998;
+		text-decoration: none;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+	}
+	
+	b {
+		font-size: 40px;
+        font-weight: bold;
+    }
+	
+	cite {
+       font-size: 40px;		
+	}
+	
+    small, dl, dt, dd {
+       font-size: 38px;
+    } 
+
+   /*uma moldura para módulos dos posts*/
+    .container-module{
+        margin-left: auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        width: 75%;
+        background-color: #D8D8D8;	
+    } 
+	
+	/*.post-module {	
+	    font-size:38px;
+        font-family:'Arial';
+		background: White;
+        position: relative;		
+        width: auto;
+        height: auto; 
+        margin-left:auto;
+        margin-right:auto;
+        border: 1px solid #d8d8d8;
+        float: center;		
+	}
+	
+    .post-flag {        
+		font-size: 38px;		
+        font-family: "Lucida Grande", arial, sans-serif;
+        font-weight: bold;
+    }		
+*/
+	
+    #header-string { 
+	    font-size: 40px;
+		margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    color: #6D6D6D;
+        text-align: center;		
+	}		
+	
+	/* primary area support */ 
+
+    /* Box para os posts. */
+    #primary {
+        float: left;
+        width: 600px;
+        box-sizing: border-box;
+   
+        /* margin: 48px 0; */
+        /* margin-top: 48px; */
+        /* margin-right: 0px; */
+        /* margin-bottom: 48px; */
+        /* margin-left: 0px; */
+        /* padding-right: 48px;*/
+    }
+	
+    #post-link {
+        font-size: 40px;
+        font-family: arial,sans-serif;
+        font-weight: bold;
+        color: #4d5664;
+    }		
+	
+   /* secondary area support */ 	
+    
+	/* Box para os widgets. */
+    #secondary {
+		font-size: 40px;
+        font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;		
+        float: right;
+        width: 600px;
+        box-sizing: border-box;
+    
+        /* margin: 48px 0; */
+        /* margin-top: 48px; */
+        /* margin-right: 0px; */
+        /* margin-bottom: 48px; */
+        /* margin-left: 0px; */
+        /* padding-right: 48px;*/
+    }
+
+    #secondary h3 {
+		font-size: 40px;
+        font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+        margin: 30px 0 23px;
+        margin-left: 0px;	
+	    margin-top: 30px;
+        margin-right: 0px;
+        margin-bottom: 23px;
+        line-height: 1em;
+        color: #111122;
+    }
+	
+    h1 { font-size: 40px; }	
+}
+
+/*4k*/
+@media screen and (min-width: 3840px) { 
+    
+	/*uma moldura para módulos dos posts*/
+    .container-module{
+        margin-left: auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        /*width: 75%;*/
+        width: 65%;
+		background-color: #D8D8D8;	
+    } 
+	
+	/*.post-module {	
+	    font-size:38px;
+        font-family:'Arial';
+		background: White;
+        position: relative;		
+        width: auto;
+        height: auto; 
+        margin-left:auto;
+        margin-right:auto;
+        border: 1px solid #d8d8d8;
+        float: center;		
+	}	
+
+    .post-flag {        
+		font-size: 38px;		
+        font-family: "Lucida Grande", arial, sans-serif;
+        font-weight: bold;
+    }*/	
+	
+  /*
+	 Secondary area support. (widgets.
+	 */	
+	
+	
+    /*área para links*/
+    .widget-area{
+        /*background: #e9e9ed;*/    
+    }  
+
+    .widget{
+        text-align:left; 
+    }
+
+    .widget-title{
+        font-size:42px;
+        font-family: 'Arial';
+        color: blue;
+        text-align:left; 		
+    }
+	
+    .widget-link{
+        font-size:42px;
+        font-family: 'Arial';
+        font-color: Gray;
+        text-align:left; 		
+    }
+
+
+	
+	/*reset big screen */
+html,
+    source,
+head,
+    del, 
+body,
+    h1, big, 
+    h2, strong, 
+    h3, div, form, fieldset, iframe, frame, span, ol, ul, li, a, p, 
+    h4, 
+    h5, 
+    h6, small {
+	
+	font-size: 42px;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: 0;
+}
+	
+	
+	
+
+    iframe {
+		float: center;
+        /*margin: 0;*/
+		/*margin-left:11px;
+		margin-right:11px;*/
+		/*border: none;*/
+		/*border-bottom:1px solid #e1e8ed;*/
+        padding-left: 10px;
+        padding-right: 10px;
+		
+		width: 95%;   
+        height: 95%;
+    }		
+	
+	/*Typography. big screen*/
+	
+	/*Emphasized text*/ 
+	em {
+        font-size: 42px;
+        font-weight: bold; 		
+	}
+	
+	font {
+	    /*font-weight: bold; */ 		
+	}
+	
+	strong {
+	    font-weight: bold; 	
+	}
+	
+	a, span {
+		font-size: 42px;
+		color: #3b5998;
+		text-decoration: none;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+	}
+	
+	b {
+		font-size: 42px;
+        font-weight: bold;
+    }
+	
+	cite {
+       font-size: 42px;		
+	}
+	
+    small, dl, dt, dd {
+       font-size: 40px;
+    } 
+	
+    #header-string { 
+	    font-size: 44px;
+		margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    color: #6D6D6D;
+        text-align: center;		
+	}		
+	
+	/* primary area support */ 
+
+    /* Box para os posts. */
+    #primary {
+        float: left;
+        width: 1000px;
+        box-sizing: border-box;
+   
+        /* margin: 48px 0; */
+        /* margin-top: 48px; */
+        /* margin-right: 0px; */
+        /* margin-bottom: 48px; */
+        /* margin-left: 0px; */
+        /* padding-right: 48px;*/
+    }
+	
+    #post-link {
+        font-size: 42px;
+        font-family: arial,sans-serif;
+        font-weight: bold;
+        color: #4d5664;
+    }		
+	
+  /* secondary area support */ 	
+    
+	/* Box para os widgets. */
+    #secondary {
+		font-size: 38px;
+        font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;		
+        float: right;
+        width: 1000px;
+        box-sizing: border-box;
+    
+        /* margin: 48px 0; */
+        /* margin-top: 48px; */
+        /* margin-right: 0px; */
+        /* margin-bottom: 48px; */
+        /* margin-left: 0px; */
+        /* padding-right: 48px;*/
+    }
+
+    #secondary h3 {
+		font-size: 38px;
+        font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+        margin: 30px 0 23px;
+        margin-left: 0px;	
+	    margin-top: 30px;
+        margin-right: 0px;
+        margin-bottom: 23px;
+        line-height: 1em;
+        color: #111122;
+    }
+	
+	#secondary ul {
+	    padding: 0px 100px;
+	}
+	
+    h1 { font-size: 44px; }	
+}
+ 

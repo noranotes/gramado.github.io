@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html id="FredNora" lang="en-US">   
+<head>
+<title>Search</title>
+<meta charset="utf-8"/>
+<meta name="description" content="On this page You will find information about Fred Nora's projetcs on Github."/>
+<meta name="keywords" content="frednora, software, html, css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="author" content="Frederico Martins Nora"/>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="canonical" href="https://frednora.github.io/search/index.html" />	
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" type="text/css" href="https://frednora.github.io/libs/bootstrap.css">
+</head>  
+<!-- initialize function -->
+<body bgcolor="#E6E6FA" onload="initialize()"> 
+
+<!-- navbar -->  
+<nav class = "navbar navbar-default" role = "navigation">
+   
+   <div class = "navbar-header">
+   <a class = "navbar-brand" href = "/index.html">Fred Nora</a>
+   </div>
+   
+   <div>
+      <ul class = "nav navbar-nav">
+         <li class = "active"><a href = "/about">About</a></li>
+		 <li><a href = "/projects">Projects</a></li>
+		 <li><a href = "/links">More ...</a></li>			
+      </ul>
+   </div>
+   
+</nav>
+    	
+<!-- container -->
+<div class="container">   
+	
+	<ul class="list-group"> 
+		
+	<li class="list-group-item"> 
+	
+	<header class="ux4-thinking-header">
+	<br>
+	
+    <!-- Search -->	
+    <div class="container" id="forms" >
+    
+	<form class="ux3-logic-forms"  name="myForm" onsubmit="return validateForm()">
+    <h3>Search:</h3>
+    <br>
+    <input class="searchEditBox" type="text" id="seb" name="search_input" maxlength="2048" 
+           autocomplete="off" role="combobox" dir="ltr" spellcheck="false">
+    <input class="btn btn-primary" id="searchsubmitButton" type="submit" value="Search" >
+    </form>
+	</div>  
+	</header>
+    
+	</li>
+	
+	<li class="list-group-item"> 
+    <br>
+	<!-- links -->	
+    <div class="search-results-list-box" id="resultLinks" align="left" >
+    <ul class="search-results-list">
+	<h3>Search Results:</h3>
+	<br><li><article><a id="link1" href="http://frednora.github.io">Fred Nora</a></article></li>
+	<br><li><article><a id="link2" href="http://frednora.github.io">Fred Nora</a></article></li>
+	<br><li><article><a id="link3" href="http://frednora.github.io">Fred Nora</a></article></li>
+	<br><li><article><a id="link4" href="http://frednora.github.io">Fred Nora</a></article></li>
+	</ul>
+    </div>		
+	</li>
+	
+	<li class="list-group-item"> 
+    <br>
+	<!-- buttons -->
+    <div  id="buttons">
+    <form>     
+    <fieldset>
+    <br><legend>Options:</legend>    
+    <button type="button" class="btn btn-secondary" onclick="function1()"> Button 1 </button>
+    <button type="button" class="btn btn-secondary" onclick="function2()"> Button 2 </button>
+    <button type="button" class="btn btn-secondary" onclick="function3()" onmouseover=""> Button 3 </button></p>
+    <br><br>
+	</fieldset>
+    </form>
+    </div> 	
+	</li>
+	
+	<!-- >> footer -->
+	<br>
+    <li class="list-group-item"> 
+	<article>	
+    <footer>
+	<center>
+	<p><i>Copyright &copy; 2017 - 
+	<a href="/about/" target="_self" onclick="initialize()" >Fred Nora</a> | <a href="/sitemap.xml" target="_parent" >XML Sitemap</a></i></p>
+	</footer>
+    </center>
+	</article>	
+	</li>
+	
+    </ul>	
+
+</div>
+	
+<script src="src/js1.js" type="text/javascript"></script>
+</body>
+</html>

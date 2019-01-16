@@ -1,0 +1,42 @@
+# Notice: Don't fear the robots.
+
+# Baidu
+User-agent: baiduspider
+Disallow: /index.html
+Disallow: /home.html
+Disallow: /about
+Disallow: /links
+Disallow: /contact
+Disallow: /images
+Disallow: /src/css1.css
+Disallow: /src/gramado.css
+Disallow: /src/gramado.js
+Disallow: /README.md
+
+# Big Brother
+User-agent: Big Brother
+Disallow: /images
+
+# Yandex
+User-agent: Yandex
+Disallow: /index.html
+Disallow: /home.html
+Disallow: /about
+Disallow: /links
+Disallow: /contact
+Disallow: /images
+Disallow: /src/css1.css
+Disallow: /src/gramado.css
+Disallow: /src/gramado.js
+Disallow: /README.md
+
+# Yandex Direct
+User-agent: YandexDirect
+Disallow: /
+
+# ?
+User-agent: *
+Disallow: /README.md
+
+# This file
+Sitemap: https://gramado.github.io/sitemap.xml 

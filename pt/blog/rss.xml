@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Fred Nora's Blog</title>
+    <link>https://frednora.github.io/blog</link>
+    <description>RSS Feed for Fred Nora's Blog</description>
+    
+	<generator>Fred Nora's generator</generator>
+    <pubDate>Sun, 05 Nov 2017 00:43:34 GMT</pubDate>
+    <lastBuildDate>Sun, 05 Nov 2017 00:43:34 GMT</lastBuildDate>
+    
+	<category>Web development</category>
+	<copyright>2017 @frednora. All rights reserved.</copyright>
+	<language>en-us</language>
+	<author>frednora@outlook.com</author>
+	
+	<image>
+      <title>Fred Nora's blog</title>
+      <url>https://frednora.github.io/images/fred.jpg</url>
+      <link>https://frednora.github.io</link>
+    </image>
+    
+	<ttl>1440</ttl>
+    
+	<item>
+      <description>Post 1</description>
+      <title>The source code for this page</title>
+      <link>https://frednora.github.io/blog/posts/2017/frednora-github-io.html</link>
+    </item>
+    
+	<item>
+	  <description>Post 2</description>
+      <title>The source code for Gramado operating system</title>
+      <link>https://frednora.github.io/blog/posts/2017/gramado.html</link>
+    </item>
+	
+	<item>
+	  <description>Post 3</description>
+      <title>The source code for kernel of Gramado operating system</title>
+      <link>https://frednora.github.io/blog/posts/2017/kernel.html</link>
+    </item>
+	
+	<item>
+	  <description>Post 4</description>
+      <title>Descrição do meu projeto pessoal</title>
+      <link>https://frednora.github.io/blog/posts/2017/projeto-pessoal.html</link>
+    </item>
+	
+  </channel>
+</rss>

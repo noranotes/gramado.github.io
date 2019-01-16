@@ -1,0 +1,38 @@
+<html lang="pt-BR">
+<head>
+    <title>Post 5</title>
+</head>
+
+<body bgcolor="#D8D8D8">
+    <center>
+    <img src="https://frednora.github.io/images/bootloader.jpg" width="240" height="240" alt="Fred Nora">
+    <h1>Sobre o processo de inicialização do sistema operacional Gramado:</h1>
+
+<br>
+<br>
+
+<div align="left">
+<p>Eu acredito que uma boa parte de vocês encontrem problemas com a inicialização, assim como eu. Por isso proponho uma discussão sobre o assunto.
+No meu sistema o boot funciona assim:</p>
+
+<p>>> O primeiro arquivo é o MBR, ele carrega o arquivo BM.BIN na memória e passa o comando para ele, além de passar como argumentos alguns parâmetros de disco. O MBR encontra o BM.BIN do diretório raiz de uma partição formatada em fat16. Isso é feito em 16bit usando recursos do BIOS.</p>
+
+<p>>> O segundo arquivo é BM.BIN, Boot Manager, ele é feito em assembly 16/32bit. Já de cara, ainda em 16bit, usando recursos do BIOS, ele carrega na memória o arquivo BL.BIN, depois faz algumas inicializações em 16bit, muda para o modo protegido, de 32bit, e entra em um mini-shell feito em assembly 32bit, de onde eu posso efetuar comandos para verificar as propriedades de disco e outras coisas. Um dos comandos é o comando 'boot', que retorna para o modo real, muda para o modo gráfico usando VESA e depois comuta para o modo protegido e passa o comando para o arquivo BL.BIN. Além de passar um monte de argumentos para ele como parâmetros do sistema.</p>
+
+<p>>> O terceiro é o BL.BIN, Boot Loader. Ele é feito em C e Assembly 32bit. Quando ele inicializa ele recebe e salva os argumentos, que são muito impotantes. Em seguida passa o comando para a parte em C 32bit, que carregará o KERNEL.BIN e vários outros arquivos, que estejam em um disco IDE formatado em fat16. Faz algumas inicializações de paginação e passa o comando para o Kernel.</p>
+
+<p>>> O quarto é o kernel em si. Falarei detalhadamente sobre ele em outro post. Mas ele é feito em C e Assembly 32 bit. É do tipo híbrido, e contém quatro camadas. Chamadas /hal /microkernel / executive /gramado. A camada /hal é para abstrações de hardware, é a única camada e mexe diretamente com o hardware. A camada /microkernel, faz a inicialização, a comunicação entre processos, o dma e principalmente o gerenciamento de processos e threads. A camada /executive são rotinas de nível superior, longe do hardware, ela oferece rotinas mais elaboradas, principalmente para gerenciamento do sistema. Por último e acima de todas, está a camada /gramado, nela estão os recursos gráficos, as primitivas de suporte para logon, logoff e gerenciamento de usuário.</p>
+
+<p>Por fim, o kernel irá passar o comando para os threads dos processos que estão em user mode e fica rodando esses threads dos processos, seguindo uma ordem de prioridades, ele intercala entre eles, deixando cada thread usar o processador na média por 8 ciclos do timer, cada ciclo tem 10 milisegundos. O thread com mais prioridade fica mais tempo.</p>
+
+</div>
+<br>
+<br>Link para o meu projeto no Github:
+<br><a href="https://github.com/frednora/gramado">https://github.com/frednora/gramado</a>
+
+<br>
+<br>Londrina, 12/11/2017 - Frederico Martins Nora. (@frednora).
+
+    </center>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "lang": "en-US",
+  "background_color": "#ffffff",
+  "name": "Gramado - Github",
+  "short_name": "Gramado",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "images/favicon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ]
+}

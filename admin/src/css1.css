@@ -1,0 +1,460 @@
+
+    /* 
+        gramado-admin.css 
+    */
+/*
+ +1 Reset.
+ */
+
+html,
+    source,
+head,
+    del, 
+body,
+    h1, big, 
+    h2, strong, 
+    h3, div, form, fieldset, iframe, frame, span, ol, ul, li, a, p, 
+    h4, 
+    h5, 
+    h6, small {
+	/*
+	font-size: 100%;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: 0;*/
+}
+
+
+/*
+ +2 Elements.
+ */
+  
+    html {
+        margin:0;
+		border:0;
+        padding:0;
+    }
+
+    head {
+        /* Nothing */     
+    }
+
+    body {
+		content: "";
+		margin-top: 0;
+		border:0;
+        padding:0;
+        background:	#D8D8D8;
+        background-color: #D8D8D8;
+    }
+     
+	
+	 
+/*
+ +3 
+ Typography.
+        Web Typography: 
+		The techniques and strategies used to style and arrange text on a web page. 
+ */
+	
+	/*Emphasized text*/ 
+	em {
+        font-size: 18px;
+        font-weight: bold; 		
+	}
+	
+	font {
+	    /*font-weight: bold; */ 		
+	}
+	
+	strong {
+	    font-weight: bold; 	
+	}
+	
+	a, span {
+		font-size: 16px;
+		color: #3b5998;
+		text-decoration: none;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+	}
+	
+	b {
+		font-size: 14px;
+        font-weight: bold;
+    }
+	
+	cite {
+       font-size: 11px;		
+	}
+	
+    small, dl, dt, dd {
+       font-size: 8px;
+    }
+	 
+
+	 
+	/*
+	   ** Navigation support  ** 
+	 */
+	 	
+    .navigation {
+	    font-size:20px;
+        font-family:'Arial';
+        margin-left:auto;
+        margin-right:auto;        
+        border:1px solid #e1e8ed;
+        border-bottom:1px solid #e1e8ed;
+        float: right;
+        display: block;
+        width:100%;
+        height:60px;
+        background-color:#fff;
+	    text-align:center;
+    }
+
+    .navigation .nav-item {
+        float:left;
+	    display: block;
+	    text-align:center;
+    }
+
+    .navigation .nav-item a {
+        border-right:1px solid #e1e8ed;
+        padding:20px 40px 19px 40px;
+        text-decoration:none;
+        color:#55acee;
+        transition: box-shadow 100ms ease;
+    }
+ 
+    .navigation .nav-item:last-child a{ 
+    	border-right:none; 
+    }
+
+    .navigation .nav-item a:hover { 
+    	box-shadow: 0 -15px 0 -10px #55acee inset; 
+    }
+
+
+    /*
+        ** other simple classes support  **
+     */
+
+    .container-module{
+        margin-left: auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        width: 75%;
+        background-color: #D8D8D8;	
+    } 
+	 
+    .index-password-box {
+	    font-size:18px;
+        font-family:'Arial';
+        margin-left:auto;
+        margin-right:auto;
+        border: 2px solid #c3c3c3;
+        width: 480px;
+        height: 480px;
+	}
+	
+    .admin-manage-box {
+	    font-size:14px;
+        font-family:'Arial';
+	}
+	
+	.searchEditBox {
+		padding: 1px;
+	    width: 403px; 
+		height: 34px; 
+	}
+	
+	.searchButton {
+        font-size: 14px;
+	    font-family: arial,sans-serif;
+        font-weight: bold;
+	    padding: 1px;
+	    width: 125px; 
+		height: 36px; 
+        color: #757575; 		
+	}
+	
+	.searchButton:hover {
+        font-size: 14px;
+	    font-family: arial,sans-serif;
+        font-weight: bold;
+	    padding: 1px;
+	    width: 125px; 
+		height: 36px; 
+		color: #000000;
+    }
+
+    /* Box onde os resultados da pesquis são apresentados.*/
+    .search-results-list-box{
+	
+	}
+ 
+    /* Uma lista de resultados de pesquisa */
+    .search-results-list {
+	 
+    }	
+	
+    .v-center {
+        text-align:center;
+        position:relative;
+        top:50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+    }
+	
+
+    /*
+         ** Simple ids support.  **
+    */
+	
+    
+    #index-form { 
+		padding:20px 40px 19px 40px;    	
+	    margin-left: 30%;
+		margin-top: 50px;
+	    text-align: center; 
+	}	
+
+    #admin-form { 
+	    text-align: left;
+        margin-left: 11px;
+        margin-top: 11px;		
+	}
+	
+    #header-string { 
+	    margin-left:auto;
+		padding:20px 40px 19px 40px;
+	    color: #6D6D6D; 
+	}
+
+	#resultLinks {
+	    /*margin-left: auto;*/
+		padding: 22px 44px 22px 44px;
+		width: 100%;
+	}
+	
+    #buttons { 
+	    text-align: center; 
+	}
+	
+    #footer { 
+		font-size: 12pt;
+        font-family: Arial,sans-serif;
+        font-weight: bold;
+        border: solid 2px Gray;
+        border-bottom: 8px solid #91D2FA;
+		position:fixed;
+        left:0px;
+        bottom:0px;
+	    width:100%;
+		height:5%;
+	    background-color: #cecece;
+        color:Black;
+        text-align: center;        
+    }
+
+
+    /*
+        **  @media support  **
+    */
+	
+
+/* 
+   Barra de navegação original, não modificada.
+   When the screen is less than 1024 pixels wide, hide all links, except for 
+   the first one ("menu"). Show the link that contains should open and close 
+   the navbar (.icon) 
+*/
+@media screen and (max-width: 1023px) {
+	
+    .navigation .nav-item:not(:first-child) {
+    	display: none;
+    }
+
+    .navigation a.icon {
+        float: left;
+        display: block;
+    }
+	
+	#adminTitle{
+		font-size:11px;
+	}
+	    
+	#index-form {
+		font-size:11px;
+		float: left;
+	    margin-left: 0;
+		margin-top: 25%;
+		margin-bottom: 25%;
+		margin-left: 25%;
+		margin-right: 25%;
+		padding: 11px 11px 11px 11px;
+	    text-align: left; 		
+	}
+
+	#admin-form {
+		font-size:11px;
+		float: left;
+	    margin-left: 0;
+		margin-top: 25%;
+		margin-bottom: 25%;
+		margin-left: 25%;
+		margin-right: 25%;
+		padding: 11px 11px 11px 11px;
+	    text-align: left; 		
+	}		
+	
+ 	#usernameEditBox {
+	    width: auto;	
+	} 
+
+	#adminPostNumberEditBox {
+		width: auto;
+	}	
+	
+	#getThis {
+	    width: auto;	
+	}  
+
+    #resultLinks {  
+	    float: left;  
+	    margin-left: 0;
+	};
+	
+	#buttons { 
+		float: left; 
+	};
+	
+	#buttonsForm { 
+		float: left; 
+	}; 
+	
+	#footer { 
+		display:none; 
+	};
+}
+
+
+/* 
+The "responsive" class is added to the navbar with JavaScript 
+when the user clicks on the icon. 
+This class makes the navbar look good on small screens 
+(display the links vertically instead of horizontally) 
+*/
+@media screen and (max-width: 1023px) {
+    
+    .responsive {
+	    position: relative;
+	}
+	
+    .responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;	
+    }
+	
+    .responsive .nav-item:first-child {
+	    font-size: 16px;
+		font-family: arial, sans-serif;
+		font-weight: normal;
+		display: none;
+	}		
+	
+    .responsive .nav-item a {
+        border:1px solid #e1e8ed;
+        border-bottom:1px solid #e1e8ed;
+        float: none;
+        display: block;
+        text-align: left;
+        background-color:#fff;
+    }
+	
+    .responsive .nav-item a:hover { 
+	    box-shadow: 0 -15px 0 -10px #55acee inset; 
+	}	
+	
+	#index-form {
+		font-size:16px;
+	    margin-left: 0;
+		margin-top: 25%;
+		margin-bottom: 25%;
+		margin-left: 25%;
+		margin-right: 25%;
+		padding: 11px 11px 11px 11px;
+	    text-align: center;
+		float: center; 		
+	}  
+}
+
+
+/*Responsive for large width, hide menu itens.*/
+@media screen and (min-width: 1023px) {
+
+    .navigation .nav-item:first-child {
+  	    display: none;
+  	}
+
+    .responsive {
+	    font-size:20px;
+        font-family:'Arial';    	
+        margin-left:auto;
+        margin-right:auto;        
+        border:1px solid #e1e8ed;
+        border-bottom:1px solid #e1e8ed;
+	    text-align:center;        
+        float: right;
+        display: block;	
+        width:100%;
+        height:60px;
+        background-color:#fff;
+    }
+
+    .responsive .nav-item:not(:first-child) {
+    	display: none;
+    }
+
+    .responsive a.icon { 
+    	float: left; 
+    	display: block; 
+    }
+    
+
+    .responsive .nav-item {
+	    text-align:center;
+        float:left;
+	    display: block;
+    }
+
+    .responsive .nav-item a {
+        border-right:1px solid #e1e8ed;      
+        padding:20px 40px 19px 40px;
+        text-decoration:none;
+        color:#55acee;
+        transition: box-shadow 100ms ease;
+    }
+
+    .responsive .nav-item:last-child a { 
+    	border-right:none; 
+    }
+
+    .responsive .nav-item a:hover { 
+    	box-shadow: 0 -15px 0 -10px #55acee inset; 
+    } 
+}
+
+
+
+	 
