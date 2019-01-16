@@ -96,7 +96,7 @@ function showLink()
     /*Facebook #ux1*/
     if(resFacebook == document.myForm.search_input.value){ 
         xLinkText1 = "Facebook profile";
-		urlDB1 = "https://facebook.com/frednoramusic";	
+		urlDB1 = "https://facebook.com/fredericomartinsnora";	
 		xLinkText2 = "Facebook page";
 		urlDB2 = "https://facebook.com/frednora";	
 		xLinkText3 = "Facebook photos";
@@ -138,13 +138,13 @@ function showLink()
 		xLinkText3 = "Collections Fred Nora";
 		urlDB3 = "https://plus.google.com/collection/IZGbe";
 		xLinkText4 = "Fred Nora Zine";
-		urlDB4 = "https://frednorazine.blogspot.com.br/";
+		urlDB4 = "https://gramadocommunity.blogspot.com/";
     };        
 		
     /*Professional*/
     if(resProfessional == document.myForm.search_input.value){ 
         xLinkText1 = "Linkedin Profile";
-		urlDB1 = "https://linkedin.com/in/fredericomartinsnora";
+		urlDB1 = "https://linkedin.com/in/londrina";
 		xLinkText2 = "About me";
 		urlDB2 = "https://about.me/frednora";
 		xLinkText3 = "Github Profile";
