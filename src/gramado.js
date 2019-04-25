@@ -54,6 +54,7 @@
     /* Entry point: 
        Isso inicializa a biblioteca.
        Isso deve ser chamado apenas uma vez. */
+
     function gramadoMain(){
 
         /*document.getElementById("getThis").focus();*/
@@ -85,6 +86,7 @@
 
     /*Isso cria os 4 classes do pacote gramado*/
     /* cinco objetos ... que terão vários métodos cada. */
+
     function CreatingGramadoPackage(){
 
         this.ux4 = 0;    /* Thinking */
@@ -184,9 +186,11 @@
 
         var GET = window.location.search.substring(14);
 
-        if(GET == ""){
+        if (GET == "")
+		{
             document.myForm.search_input.value = "";
             return 0;
+			
         }else{
             document.myForm.search_input.value = GET;
         }
@@ -200,45 +204,45 @@
 		a análise é feita pelo js da página /seach.
 		Isso está aqui só para uso futuro.*/
 
-        str = "https://frednora.github.io/ home"; 
+        str = "https://gramado.github.io/ home"; 
         var resIndex = str.match(document.myForm.search_input.value);
 
-        str = "https://frednora.github.io/about fred nora Fred Nora Frederico economist developer author";
+        str = "https://gramado.github.io/about fred nora Fred Nora Frederico economist developer author";
         var resAboutMe = str.match(document.myForm.search_input.value);
 
-        str = "https://frednora.github.io/projects work kernel gui osdev source";
+        str = "https://gramado.github.io/projects work kernel gui osdev source";
         var resProjects = str.match(document.myForm.search_input.value);
 
-        str = "https://frednora.github.io/links social network twitter facebook youtube linkedin";
+        str = "https://gramado.github.io/links social network twitter facebook youtube linkedin";
         var resLinks = str.match(document.myForm.search_input.value);
 
-        str = "https://frednora.github.io/contact email business"; 
+        str = "https://gramado.github.io/contact email business"; 
         var resContactMe = str.match(document.myForm.search_input.value);
 
         /* @TODO: PARSE SOME FILES AND TEXT TO FIND A RESULT */
 
         /**/
-        if(resIndex == document.myForm.search_input.value) {
+        if (resIndex == document.myForm.search_input.value){
             document.myForm.search_input.value = "index.html";
         }
 
         /**/
-        if(resAboutMe == document.myForm.search_input.value) {
+        if (resAboutMe == document.myForm.search_input.value){
             document.myForm.search_input.value = "about";
         }
 
         /**/
-        if(resProjects == document.myForm.search_input.value) {
+        if (resProjects == document.myForm.search_input.value){
             document.myForm.search_input.value = "projects";
         }
 
         /**/
-        if(resLinks == document.myForm.search_input.value) {
+        if (resLinks == document.myForm.search_input.value){
             document.myForm.search_input.value = "links";
         }
 
         /**/
-        if(resContactMe == document.myForm.search_input.value) {
+        if (resContactMe == document.myForm.search_input.value){
             document.myForm.search_input.value = "contact";
         }
 
@@ -259,7 +263,7 @@
 		/* alert("~validate input Opening URL."); */
 
         var url_search;
-        url_search = "https://frednora.github.io/search/?search_input=";
+        url_search = "https://gramado.github.io/search/?search_input=";
 
 		/*alert("do_validateForm: debug");*/
 

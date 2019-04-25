@@ -318,6 +318,7 @@ disponível na web.
         background-color: #dff0d8;
     }
 
+
     .bg-info {
         background-color: #d9edf7;
     }
@@ -957,12 +958,10 @@ disponível na web.
     }
 
 
-
     .row {
         margin-right: -16px;
         margin-left: -16px;
     }
-
 
     .table {
         width: 100%;
@@ -1050,7 +1049,6 @@ disponível na web.
   pointer-events: none;
 }
 */
-
 
     .navbar-fixed-top,
     .navbar-fixed-bottom {
