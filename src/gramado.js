@@ -15,10 +15,7 @@
     Funções na biblioteca:
     ======================
     gramadoMain()                    - Inicializa a biblioteca.
-    gramado.ux4.ux4Alert()           - teste 
-    gramado.ux3.ux3Alert()           - teste 
-    gramado.ux2.ux2Alert()           - teste
-    gramado.ux1.ux1Alert()           - teste 
+
     gramado.admin.validateForm()     - valida um formulário.
     gramado.admin.function1()        - teste
     gramado.admin.function2()        - teste
@@ -63,20 +60,10 @@
 
         gramado = new CreatingGramadoPackage();
 
-        /* Com o pacote criado, vamos configurar os ponteiros para os métodos das 5 classes */
-        gramado.ux4 = new UX4();
-        gramado.ux3 = new UX3();
-        gramado.ux2 = new UX2();
-        gramado.ux1 = new UX1();
-        gramado.admin = new ADMIN();
+         gramado.admin = new ADMIN();
         /* more ...*/
 
-        /*testando ...*/
-
-        /* gramado.ux4.ux4Alert();  */
-        /* gramado.ux3.ux3Alert(); */
-        /* gramado.ux2.ux2Alert(); */
-        /* gramado.ux1.ux1Alert(); */
+ 
 
         /* Done.*/
         /* Mensagem sinalizando o fim da inicialização da lib.*/
@@ -89,40 +76,14 @@
 
     function CreatingGramadoPackage(){
 
-        this.ux4 = 0;    /* Thinking */
-        this.ux3 = 0;    /* Logic */
-        this.ux2 = 0;    /* Criativity */ 
-        this.ux1 = 0;    /* Action*/ 
+ 
 
         this.admin = 0;  /* Admin support */
     }
 
-    /* A partir daqui, vamos configurar os ponteiros para os métodos das 5 classes.
-     * Mais de um ponteiro poderá ser configurado para cada uma das 5 classes. */
+    
 
-    /*ux4 thinking*/
-    function UX4(){ 
-        this.ux4Alert = do_ux4Alert;  /* 'gramado.ux4.ux4Alert()' chamará 'do_ux4Alert()'*/
-        //...
-    }
-
-    /*ux3 logic*/
-    function UX3(){
-        this.ux3Alert = do_ux3Alert;  /* */
-        //...
-    }
-
-    /*ux2 criativity*/
-    function UX2(){
-        this.ux2Alert = do_ux2Alert;  /* */
-        //...
-    }
-
-    /*ux1 action*/
-    function UX1(){
-        this.ux1Alert = do_ux1Alert;  /* */
-        //...
-    }
+ 
 
     /* Administrando a biblioteca. Essas são as funcionalidades administrativas da biblioteca */
     function ADMIN(){
@@ -152,21 +113,7 @@
 
     /* Manteremos a ordem */
 
-    function do_ux4Alert(){
-        alert("~UX4");
-    }
-
-    function do_ux3Alert(){
-        alert("~UX3");
-    }
-
-    function do_ux2Alert(){
-        alert("~UX2");	
-    }
-
-    function do_ux1Alert(){
-        alert("~UX1");
-    }
+    
 
     function do_initializedAlert(){
         alert("do_initializedAlert: method working ~It's initialized!");
@@ -317,18 +264,7 @@
         window.alert(message);
     }
 
-    /* Toggle between adding and removing the "ux3-logic-responsive" class to topnav when the user clicks on the icon. */
-
-    function do_myFunction(){
-
-        var x = document.getElementById("myTopnav");
-        
-        if( x.className === "ux3-logic-navigation" ){
-            x.className = "ux3-logic-responsive";
-        }else{
-            x.className = "ux3-logic-navigation";
-        }
-    }
+ 
 
     /* Esse método é para baixar um arquivo que foi construído em um form com os inputs 'filename_input' e 'filetext_input'. 
        Para acionar esse método é usada a função >> gramado.admin.download(); */
