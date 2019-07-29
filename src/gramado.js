@@ -1,4 +1,5 @@
-/* File: gramado.js 
+/* 
+    File: gramado.js 
 
     Client side js library.
 
@@ -80,8 +81,6 @@
 
     function CreatingGramadoPackage(){
 
- 
-
         this.admin = 0;  /* Admin support */
     }
 
@@ -121,6 +120,7 @@
 
     function do_initializedAlert(){
         alert("do_initializedAlert: method working ~It's initialized!");
+        return 0;
     }
  
 	/*  do_validateForm:
@@ -263,9 +263,11 @@
         return 0;
     }
 
+
     // Showing some message.
-    function do_messageShow(){
+    function do_messageShow (){
         window.alert(message);
+        return 0;
     }
 
  
@@ -297,6 +299,8 @@
         }else{
             pom.click();
         }
+
+    return 0;
 }
 
 
