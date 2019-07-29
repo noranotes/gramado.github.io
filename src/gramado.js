@@ -52,7 +52,7 @@
        Isso inicializa a biblioteca.
        Isso deve ser chamado apenas uma vez. */
 
-    function gramadoMain(){
+    function gramadoMain (){
 
         /*document.getElementById("getThis").focus();*/
 
@@ -69,7 +69,9 @@
         /* Mensagem sinalizando o fim da inicialização da lib.*/
         /*gramado.admin.initializedAlert();*/
         /* return 0; */
-    };
+    }
+
+
 
     /*Isso cria os 4 classes do pacote gramado*/
     /* cinco objetos ... que terão vários métodos cada. */
@@ -93,7 +95,7 @@
         this.function3 = do_function3;
         this.messageShow = do_messageShow;
         this.initializedAlert = do_initializedAlert;
-        this.myFunction = do_myFunction;
+        //this.myFunction = do_myFunction;
         this.download = do_downloadFile;
         /*Continua ...*/
     }
