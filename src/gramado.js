@@ -69,6 +69,8 @@
         /* Mensagem sinalizando o fim da inicialização da lib.*/
         /*gramado.admin.initializedAlert();*/
         /* return 0; */
+        
+        return 0;
     }
 
 
