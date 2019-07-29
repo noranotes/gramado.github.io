@@ -4,8 +4,8 @@
  */
     
 //Initialize ...
-function initialize()
-{		
+function initialize(){
+		
 	document.getElementById("seb").focus(); 
         
     var GET = window.location.search.substring(14);
