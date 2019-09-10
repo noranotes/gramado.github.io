@@ -1,0 +1,798 @@
+/* 
+    File: gramado.css 
+	
+	Client side CSS library.
+    
+	Gramado Personas 2018.
+	----------------------
+	
+	Biblioteca para contrução de páginas web.
+    Isso é um protótipo. 
+	Essa é uma versão piloto. 
+	Com comentários detalhados.
+	Ordem: 
+	text stuff first of all   
+	font>text>...
+	padding>border>margin
+	
+	Segue um modelo de organização da biblioteca por tipo de elemento:
+    =================================================================
+   
+    Obs: Essa organização é inspirada na organização de outra biblioteca open source
+disponível na web.
+    Obs: Ordem: Reset/Elements/Typography/Globals/@media MAX/@media MIN.
+	
+1.0:
+    Reset. ?? 
+	(Inicializações).
+	
+2.0:
+    Elements. 
+	Elementos básicos. 
+	Os elementos básicos de html como 
+	del, figure, img, th, td, (th, td) ,caption, table dd, dt,dl li, ul, ol, hr.
+
+3.0:
+    Typography.
+	Big, small (font size ??) 
+	sup, sub, 
+	mark, ins, pre, samp, var, tt, kbd, code, address, blockquote support, 
+	h1, h2, h3, h4, h5, h6 ... 
+	p, b, 
+	strong, dfn, cite, em, i, body,
+    button, input, select, textarea,
+		
+	
+4.0: 
+    Classes globais.
+	ux4-thinking, ux3-logic, ux2-creativity ,ux1-action
+ 
+5.0:
+   @media MIN
+   
+   
+    @todo:
+        Simplificar as funcionalidades. 
+   
+    History:
+        2017 - Created by Fred Nora.  
+*/
+ 
+ 
+/* Obs: Talvez isso não seja necessário. */ 
+<style type="text/css">
+
+
+/* +1 Reset */
+
+    button {
+        cursor: pointer;		
+    }
+
+   caption {
+		
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: left;
+    }
+
+   code {
+        font-size: 88%;
+        color: #C0C0C0;
+        background-color: #f0f0f0;
+     }	
+
+    em {
+       font-size: 99%;
+        color: #B0B0B0;
+        background-color: #f0f0f0;
+    }
+
+    samp {
+       font-size: 90%;
+        color: #C0C0C0;
+        background-color: #f0f0f0;    
+    }
+
+    kbd {
+       font-size: 90%;
+        color: #C0C0C0;
+        background-color: #f0f0f0;    
+    }
+
+    var {
+       font-size: 90%;
+        color: #C0C0C0;
+        background-color: #f0f0f0;    
+    }
+
+    img {
+	    border: 0;
+    }
+
+    th {
+        text-align: left;
+        padding: 0;
+    }
+
+    td {
+        padding: 0;    
+    }
+
+    dl {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+
+    dt {
+        font-weight: bold;
+    }
+
+    dd {
+        margin-left: 0;
+    }	
+	
+    figure {
+        margin: 0;
+    }
+	
+    hr {
+        margin-top: 22px;
+        margin-bottom: 22px;
+        border: 0;
+        border-top: 1px solid #ddd;
+        height: 0;
+      }	
+
+	
+    label {
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    legend {
+        font-size: 22px;
+        padding: 0;
+        margin-bottom: 8px;
+        color: #333;
+        border: 0;
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+    input {
+        margin: 0;
+        font-size: 15px;    
+        padding-top: 8px;		
+        color: #555;		
+    }
+
+    output {
+        font-size: 15px;
+        display: block;
+        padding-top: 8px;
+        color: #555;
+    }		
+	 	 
+    table {
+        background-color: transparent;		
+    }
+	
+    article,
+    figure,
+    footer,
+    header {
+        display: block;
+    }
+
+
+
+	
+ 
+ 
+/* +2 Elements */
+
+    html {
+		
+	    /* naturalmente pequena no html */
+        
+		font-size: 11px;
+		font-family: "Minion", fantasy, Optima; /*font-family: sans-serif;*/
+        padding:0;
+		border:0;
+        margin:0;
+    } 
+
+    head { /* Nothing */ }
+ 
+	body {
+	    
+		/* naturalmente média o|o no body  (A) */
+		font-size: 15px;
+        font-family: "Decorative", Schola, American ; /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+        margin: 0;	       
+		position: absolute;
+        color: #FFF;
+    }	
+	 
+
+
+/*
+ +3 
+ Typography.
+        Web Typography: 
+		The techniques and strategies used to style and arrange text on a web page. 
+		coisas de texto em geral
+ */
+	
+	strong {
+	    font-weight: bold; 	
+	}
+	
+	
+	a {
+		/*font*/
+		font-size: 15px; /*A*/
+		
+	    /* color */
+        color: #3377aa;*/
+        background-color: transparent;				
+		
+	    /* text */		
+        text-decoration: none;		
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+	}
+	
+
+    a:active {
+        outline: 1;		
+	}
+    
+	a:focus {
+        color: #225577;
+        text-decoration: underline;
+    }
+	
+    a:hover {
+        color: #225588;		
+        text-decoration: underline;
+        outline: 0;		
+	}
+		
+	b {
+		font-size: 15px;
+        font-weight: bold;
+    }
+
+	cite {
+       font-size: 11px;		
+	}
+
+	dd {
+       font-size: 8px;
+    }
+	
+	dl {
+       font-size: 8px;		
+	} 
+	
+	dt {
+       font-size: 8px;		
+	}
+		
+	em {
+        font-size: 18px;
+        font-weight: bold; 		
+	}
+	
+	font {
+	    /*font-weight: bold; */ 		
+	}	
+	
+
+    h1 {
+        margin: .66em 0;
+    }
+	
+
+	/* big */
+    h1, .h1, h2, .h2  {
+		font-size: 44px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+
+    /* medioum*/
+    h3, .h3, h4, .h4 {
+		font-size: 22px;
+       margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+	/* small */
+     h5, .h5, h6, .h6 {
+		font-size: 8px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+	input {
+        font-size: 15px;
+		font-family: "Lucida Grande";
+        line-height: normal;		
+    }
+	
+	
+    p {
+        margin: 0 0 11px;
+    }
+	
+
+	/* font */
+    small, .small {
+		
+       font-size: 88%;	   
+	}
+	
+	
+    /* text */	
+	span {
+		font-size: 15px;
+		color: #335599;		
+		text-decoration: none;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+	}
+	
+
+    textarea {
+        overflow: auto;
+    }
+	
+    button {
+		
+        font-size: 15px;
+		font-family: "Lucida Grande";
+    }
+	
+    legend {
+        padding: 0;
+        border: 0;
+    }
+	
+ 
+     
+
+/*
+ +4
+    Classes globais.
+	Project Gramado Personas.
+
+
+   /* global class*/
+
+    .bg-primary {
+        color: #fff;
+        background-color: #337ab7;
+    }
+
+    .bg-secondary {
+        color: #fff;
+        background-color: #337bb8;
+    }
+
+
+  .button {
+	  
+        font-size: 15px;
+        font-weight: normal;
+        text-align: center;
+        display: inline-block;
+        padding: 11px 11px;
+        margin-bottom: 0;	  
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+	  
+    }
+
+    .button-primary {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+
+    .button-secondary {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2F6da8;
+    }
+
+
+    .container {
+		
+        padding-right: 15px;
+        padding-left: 15px;
+		
+        margin-right: auto;
+        margin-left: auto;
+		
+    }
+
+
+    .container-wide {
+		
+        padding-right: 11px;
+        padding-left: 11px;
+        margin-right: auto;
+        margin-left: auto;
+		
+    }
+	
+    .form {
+		
+        font-size: 15px;
+		
+        display: block;
+        width: 100%;
+		
+        height: 33px;
+        
+		padding: 8px 8px;
+        
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    }
+	
+
+
+    .input {
+        display: table;
+     }
+
+   .output {
+        display: table;
+     }
+
+    /* \o/ */
+    .input-small {
+        font-size: 8px;
+        height: 22px;
+        padding: 8px 9px;
+        line-height: 1.2;
+        border-radius: 3px;
+    }
+
+    .input-medium {
+        font-size: 15px;
+        height: 33px;
+        padding: 10px 11px;
+        line-height: 1.3333333;
+        border-radius: 4px;
+    }
+
+    /* \O/ */
+    .input-large {
+        font-size: 18px;
+        height: 44px;
+        padding: 12px 13px;
+        line-height: 1.3333333;
+        border-radius: 5px;
+    }
+
+    .label {
+       font-size: 88%;
+       font-weight: bold;
+	   text-align: center;
+       display: inline;
+
+       line-height: 1;
+       color: #fff;
+    }
+
+
+    .media {
+        margin-top: 15px;
+    }
+
+
+    /* navbar support */
+
+    .navbar {
+        position: relative;
+        min-height: 55px;
+        margin-bottom: 22px;
+        border: 1px solid transparent;
+    }
+	
+    .navbar-brand {
+        font-size: 18px;		
+        float: left;
+        height: 55px;
+        padding: 15px 15px;
+        line-height: 22px;
+    }
+	
+    .navbar-button {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+
+    .topbar {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+	
+	
+    .bottombar {
+        bottom: 0;
+        margin-bottom: 0;
+        border-width: 1px 0 0;
+    }
+	
+
+
+    .navbar-text {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+ 
+ 		
+    /*Módulos onde os posts serão apresentados em /blog/index.html */
+    .posts {
+	    
+		font-size: 15px;
+        font-family:'Arial';
+        margin-left:auto;
+        margin-right:auto;
+        border: 1px solid #d8d8d8;	 
+		background: White;
+        position: relative;		
+        width: 88%;
+        height: 44%;
+    }
+		
+	
+    .progress-bar {
+		
+        font-size: 11px;
+		text-align: center;
+        float: left;
+        width: 0;
+        height: 100%;
+        line-height: 22px;
+        color: #fff;
+        background-color: #337777;
+    }
+
+    
+  
+    .table {
+        width: 100%;
+        max-width: 100%;
+		
+        margin-bottom: 15px;
+    }
+
+
+    .thumbnail {
+		
+        display: block;
+        padding: 8px;
+        margin-bottom: 22px;
+         background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+     }
+
+
+
+    .radio,
+    .checkbox {
+        position: relative;
+        display: block;
+        margin-top: 11px;
+        margin-bottom: 11px;
+    }
+
+ 
+    .widget {
+        text-align: left; 
+    }
+
+ 
+	
+     .invisible {
+       visibility: hidden;
+    }
+	
+
+	
+    .hidden {
+        display: none !important;
+    }
+
+    
+    }
+  
+     
+    
+   
+
+/*
+ +5
+ ************************************ @media MIN *******************************     
+ */
+
+/* 
+Alguns elementos gráficos ficam evidenciados à medidada que a tela aumenta.
+algumas fontes tem que aumentar.
+ */ 
+ 
+ 
+@media screen and (min-width: 320px) { 
+    .container {
+        width: 300px;
+    }
+ 
+    .container-wide {
+        width: 320px;
+    }
+}
+ 
+@media screen and (min-width: 480px) { 
+    .container {
+        width: 460px;
+    }
+ 
+    .container-wide {
+        width: 480px;
+    }
+} 
+
+@media screen and (min-width: 640px) { 
+    .container {
+        width: 620px;
+    }
+ 
+    .container-wide {
+        width: 640px;
+    }
+}
+ 
+@media screen and (min-width: 720px) { 
+    .container {
+        width: 700px;
+    }
+ 
+    .container-wide {
+        width: 720px;
+    }
+} 
+
+@media (min-width: 768px) {
+    .container {
+        width: 748px;
+    }
+ 
+    .container-wide {
+        width: 768px;
+    }
+	
+  .navbar {
+    border-radius: 4px;
+  }  
+
+   
+   
+}
+  
+
+
+ 
+/* 
+ >> MIN 1023px
+ Responsive for large width, hide menu itens. */
+@media screen and (min-width: 1024px) {
+	
+ 
+    .container {
+        width: 1004px;
+    }
+ 
+    .container-wide {
+        width: 1024px;
+    }
+
+}
+
+ 
+
+@media screen and (min-width: 1280px) {
+	
+	 
+	
+    .container {
+        width: 1260px;
+    }
+ 
+    .container-wide {
+        width: 1280px;
+    }
+	
+} 
+
+@media screen and (min-width: 1366px) { 
+
+  
+
+    .container {
+        width: 1346px;
+    }
+ 
+    .container-wide {
+        width: 1366px;
+    }
+} 
+
+
+@media screen and (min-width: 1440px) { 
+
+	 
+    .container {
+        width: 1420px;
+    }
+ 
+    .container-wide {
+        width: 1440px;
+    }
+} 
+
+ 
+@media screen and (min-width: 2048px) {
+	
+ 
+   
+
+    .container {
+        width: 2028px;
+    }
+ 
+    .container-wide {
+        width: 2048px;
+    }
+
+} 
+
+ 
+/* 4k */
+@media screen and (min-width: 3840px) { 
+ 
+  
+    .container {
+        width: 3800px;
+    }
+ 
+    .container-wide {
+        width: 3840px;
+    }
+	
+ 
+
+} 
+
+
+
+
+</style>
