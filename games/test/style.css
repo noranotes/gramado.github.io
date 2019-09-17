@@ -1,0 +1,83 @@
+*{
+	font-family: sans-serif;
+	color: #FFFFFF;
+	background: #OOAAFF;
+}
+				
+#myBody
+{
+	background-color: #111155;
+}
+
+#resetButton
+{
+	color: #000000;
+}
+
+#infos
+{
+}
+
+table.darkTable {
+  font-family: "Arial Black", Gadget, sans-serif;
+  border: 0px solid #000000;
+  background-color: #4A4A4A;
+  width: 50%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.darkTable td, table.darkTable th {
+  border: 0px solid #4A4A4A;
+  padding: 3px 2px;
+}
+table.darkTable tbody td {
+  font-size: 13px;
+  color: #E6E6E6;
+}
+table.darkTable tr:nth-child(even) {
+  background: #888888;
+}
+table.darkTable thead {
+  background: #000000;
+  border-bottom: 3px solid #000000;
+}
+table.darkTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #E6E6E6;
+  text-align: center;
+  border-left: 2px solid #4A4A4A;
+}
+table.darkTable thead th:first-child {
+  border-left: none;
+}
+
+table.darkTable tfoot td {
+  font-size: 12px;
+}
+
+div.darkDiv 
+{
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 3px 5px rgba(255,255,255,0); 
+	box-shadow: 0px 10px 13px -7px #000000, 5px 5px 3px 5px rgba(255,255,255,0);
+	background: #6D6D6D;
+	border: 10px;
+	padding: 10px;
+	width: 60%;
+}
+
+div.canvasDiv 
+{
+    /*-webkit-box-shadow: 0px 5px 5px -3px #000000, 3px 3px 3px 3px rgba(255,255,255,0);*/ 
+	/*box-shadow: 0px 5px 5px -3px #000000, 3px 3px 3px 3px rgba(255,255,255,0);*/
+	background: #555555;
+	border: 10px;
+	padding: 10px;
+	width: 60%;
+}
+
+
+body#tinymce 
+{
+	background: #FFFFFF
+}

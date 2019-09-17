@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<meta property="og:title" content="Hash Game AI - by Filipe Chagas">
+		<meta property="og:description" content="This is an algorithm that competes in the hash game with you. His goal is not to let you win the game.">
+		<meta property="og:image" content="https://raw.githubusercontent.com/FilipeChagasDev/HashGameAI/master/meta.png">
+		<meta property="og:url" content="https://filipechagasdev.github.io/HashGameAI/">
+		<meta property="og:type" content="website">
+
+		<title>Hash Game AI - by Filipe Chagas </title>
+		<link rel="stylesheet" href="gh-buttons.css">
+		<link rel="stylesheet" href="style.css">
+		
+</head>
+
+
+
+<body id="myBody" >
+
+		<center>
+			<h1> Hash Game AI </h1>
+
+				<div class="darkDiv">
+					
+					<p><button class="button big icon reload" type="submit" id="resetButton"> reset game </button></p>
+
+					<div class="canvasDiv" >
+						<canvas id="cv" color="#FFFFFF" width="301" height="301"/>
+					</div>
+
+					<p>
+						<table  class="darkTable" style="width:90%" border="1px">
+
+							<tr>
+								<th>My GitHub profile</th>
+								<th>GitHub repository where it is hosted</th>
+							</tr>
+							<tr>
+								<th>
+									<a class="button icon user" href="https://www.github.com/FilipeChagasDev"> github.com/FilipeChagasDev </a> 
+								</th>
+								<th>
+									<a class="button" href="https://github.com/FilipeChagasDev/HashGameAI"> github.com/FilipeChagasDev/HashGameAI </a>
+								</th>
+							</tr>
+						</table>
+					</p>
+				</div>
+
+			</p>
+
+			<p id="infos" > 
+				by Filipe Chagas </br></br>
+				Click to put 'o' in a gap. </br>
+				Next, the AI will put 'x' in a gap. </br>
+				If you want to restart the game, reload the page (press F5) or click on the 'reset game' button. </br>
+			
+			
+			<p><div style="width:60%">
+				<h4>This AI is based on the MINMAX algorithm</h4>
+				The algorithm is done in JavaScript, and it is all contained in a single file. Do you want to take a look?
+
+				<p> 
+					<a class="button big" href="https://github.com/FilipeChagasDev/HashGameAI/blob/master/script.js">
+						view source code file
+					</a>
+				</p>
+
+			</div></p>
+
+			
+		</center>
+		
+
+<script src="script.js"></script>
+</body>
+</html>
