@@ -81,7 +81,7 @@
 
     function CreatingGramadoPackage (){
 
-        console.log ("Creating packege ...");
+        console.log ("Creating package ...");
 
         this.admin = 0;  /* Admin support */
     }
