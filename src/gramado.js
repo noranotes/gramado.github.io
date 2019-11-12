@@ -61,7 +61,7 @@
 
         gramado = new CreatingGramadoPackage ();
 
-         gramado.admin = new ADMIN ();
+        gramado.admin = new ADMIN ();
         /* more ...*/
 
 
@@ -123,7 +123,6 @@
     function do_initializedAlert (){
 
         alert ("do_initializedAlert: Method working ~It's initialized!");
-
         return 0;
     }
  
