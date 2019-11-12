@@ -55,6 +55,8 @@
 
     function gramadoMain (){
 
+        console.log ("gramadoMain");
+
         /*document.getElementById("getThis").focus();*/
 
         /* alert("gramadoMain:"); */
@@ -77,7 +79,9 @@
     /*Isso cria os 4 classes do pacote gramado*/
     /* cinco objetos ... que terão vários métodos cada. */
 
-    function CreatingGramadoPackage(){
+    function CreatingGramadoPackage (){
+
+        console.log ("Creating packege ...");
 
         this.admin = 0;  /* Admin support */
     }
@@ -91,6 +95,8 @@
      Essas são as funcionalidades administrativas da biblioteca 
      */
     function ADMIN (){
+
+        console.log ("Creating pointers for all methods ...");
 
         this.validateForm = do_validateForm;
         this.function1 = do_function1;
@@ -122,6 +128,7 @@
 
     function do_initializedAlert (){
 
+        console.log ("Initialized alert!");
         alert ("do_initializedAlert: Method working ~It's initialized!");
         return 0;
     }
@@ -135,6 +142,8 @@
     */
 
     function do_validateForm (){
+
+        console.log ("Validating form ...");
 
         var xHref;
         var xSave;
@@ -300,6 +309,8 @@
        Para acionar esse método é usada a função >> gramado.admin.download(); */
        
     function do_downloadFile(){
+
+        console.log ("Downloading file ...");
 
 		//file support.
         var xFileName = "fail";
