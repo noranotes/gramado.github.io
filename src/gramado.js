@@ -42,9 +42,9 @@
     // Variables.
     var var11 = 0;
     var string1 = "This is a string.";
+    var message = "Initializing ...";
 
-    // Strings.
-    message = "Initializing ..."
+
 
 	/* # Step 2 # */
 	/* Setup library */
@@ -59,17 +59,15 @@
 
         /* alert("gramadoMain:"); */
 
-        gramado = new CreatingGramadoPackage();
+        gramado = new CreatingGramadoPackage ();
 
-         gramado.admin = new ADMIN();
+         gramado.admin = new ADMIN ();
         /* more ...*/
 
- 
 
         /* Done.*/
         /* Mensagem sinalizando o fim da inicialização da lib.*/
         /*gramado.admin.initializedAlert();*/
-        /* return 0; */
         
         return 0;
     }
@@ -86,22 +84,24 @@
 
     
 
- 
+    /* 
+     Apontando para os métodos. 
+     Todos os métodos começam com 'do_'.
+     Administrando a biblioteca. 
+     Essas são as funcionalidades administrativas da biblioteca 
+     */
+    function ADMIN (){
 
-    /* Administrando a biblioteca. Essas são as funcionalidades administrativas da biblioteca */
-    function ADMIN(){
         this.validateForm = do_validateForm;
         this.function1 = do_function1;
         this.function2 = do_function2;
         this.function3 = do_function3;
         this.messageShow = do_messageShow;
         this.initializedAlert = do_initializedAlert;
-        //this.myFunction = do_myFunction;
         this.download = do_downloadFile;
+        //this.myFunction = do_myFunction;
         /*Continua ...*/
     }
-
-
 
 
 
@@ -110,24 +110,32 @@
 
 	/* Methods */
 
-	/*  Daqui pra baixo, criaremos os métodos propriamente ditos
+    /*  
+        Daqui pra baixo, criaremos os métodos propriamente ditos
 		Obs: Cada método tem um ponteiro para acessá-lo. O ponteiro fica 
-		na sua respectiva classe. */
+        na sua respectiva classe. 
+    */
 
     /* Manteremos a ordem */
 
     
 
-    function do_initializedAlert(){
-        alert("do_initializedAlert: method working ~It's initialized!");
+    function do_initializedAlert (){
+
+        alert ("do_initializedAlert: Method working ~It's initialized!");
+
         return 0;
     }
  
-	/*  do_validateForm:
-		O objetivo desse método é capturar o input do form na página inicial, usado na busca, compará lo com o banco de dados,
-		apresentar o resultado em outra página /search que também será um mecanismo de pesquisa. */
 
-    function do_validateForm(){
+    /*  
+        do_validateForm:
+        O objetivo desse método é capturar o input do form na página inicial, 
+        usado na busca, compará lo com o banco de dados, apresentar o resultado em 
+        outra página /search que também será um mecanismo de pesquisa. 
+    */
+
+    function do_validateForm (){
 
         var xHref;
         var xSave;
@@ -136,14 +144,15 @@
         /*var file_name;*/
         /* ... */
 
+        var url_search = "https://gramado.github.io/search/?search_input=";
+
         /*alert("do_validateForm: Getting substring ...");*/
 
-        /* var GET = "gui";*/
 
-        var GET = window.location.search.substring(14);
+        var GET = window.location.search.substring (14);
 
-        if (GET == "")
-		{
+        if (GET == ""){
+
             document.myForm.search_input.value = "";
             return 0;
 			
@@ -158,7 +167,8 @@
 	/* Obs: 
 		Essa comparação não funciona, quando a busca é feita em /home.html, pois 
 		a análise é feita pelo js da página /seach.
-		Isso está aqui só para uso futuro.*/
+        Isso está aqui só para uso futuro.
+    */
 
         str = "https://gramado.github.io/ home"; 
         var resIndex = str.match(document.myForm.search_input.value);
@@ -175,41 +185,53 @@
         str = "https://gramado.github.io/contact email business"; 
         var resContactMe = str.match(document.myForm.search_input.value);
 
-        /* @TODO: PARSE SOME FILES AND TEXT TO FIND A RESULT */
+
+        /* 
+         #TODO: 
+         PARSE SOME FILES AND TEXTs TO FIND A RESULT. 
+         */
+
 
         /**/
-        if (resIndex == document.myForm.search_input.value){
+        if (resIndex == document.myForm.search_input.value)
+        {
             document.myForm.search_input.value = "index.html";
         }
 
         /**/
-        if (resAboutMe == document.myForm.search_input.value){
+        if (resAboutMe == document.myForm.search_input.value)
+        {
             document.myForm.search_input.value = "about";
         }
 
         /**/
-        if (resProjects == document.myForm.search_input.value){
+        if (resProjects == document.myForm.search_input.value)
+        {
             document.myForm.search_input.value = "projects";
         }
 
         /**/
-        if (resLinks == document.myForm.search_input.value){
+        if (resLinks == document.myForm.search_input.value)
+        {
             document.myForm.search_input.value = "links";
         }
 
         /**/
-        if (resContactMe == document.myForm.search_input.value){
+        if (resContactMe == document.myForm.search_input.value)
+        {
             document.myForm.search_input.value = "contact";
         }
 
-		/* ... */
-
         xHref = document.myForm.search_input.value;
 
+
+
         /* Show formated link */
-        document.getElementById("link1").innerHTML = xSave;
-        document.getElementById("link1").href = xHref;
-        document.getElementById("link1").target = "_self";
+    
+        document.getElementById ("link1").innerHTML = xSave;
+        document.getElementById ("link1").href = xHref;
+        document.getElementById ("link1").target = "_self";
+
 
         document.myForm.search_input.value = xSave;
 
@@ -218,8 +240,7 @@
 
 		/* alert("~validate input Opening URL."); */
 
-        var url_search;
-        url_search = "https://gramado.github.io/search/?search_input=";
+
 
 		/*alert("do_validateForm: debug");*/
 
@@ -228,45 +249,49 @@
 		/*this.document.location.href = "www.google.com";*/
 
 		/*window.open(url_search,"_self",false);*/
-        var myWindow = window.open(url_search + xSave);
+        var myWindow = window.open (url_search + xSave);
 		/*alert("do_validateForm: EXIT");*/
 
 		/* ?? O que acontece ao retornarmos, ??? inicializa a biblioteca quando chega no elemento 'body' ??*/
 		/* return 0; */
     }
 
+
     //Test 1.
-    function do_function1(){
-        window.alert("Testing button 1.");
+    function do_function1 (){
+
+        window.alert ("Testing button 1.");
         return 0;
     }
 
     //Test 2.
-    function do_function2(){
-        window.alert("Testing button 2.");
+    function do_function2 (){
+
+        window.alert ("Testing button 2.");
         return 0;
     }
 
     //Test 3.
-    function do_function3(){
+    function do_function3 (){
 
         var txt;
-        var r = confirm("Press a button!");
+        var r = confirm ("Press a button!");
         
-        if(r == true){
+        if (r == true){
             txt = "You pressed OK!";
         }else{
             txt = "You pressed Cancel!";
         }
         
-        window.alert(txt); 
+        window.alert (txt); 
         return 0;
     }
 
 
     // Showing some message.
     function do_messageShow (){
-        window.alert(message);
+
+        window.alert (message);
         return 0;
     }
 
