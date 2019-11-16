@@ -2,18 +2,25 @@
 
 <head>
 
+<!-- Custom style for this page -->    
+<!-- <link rel="stylesheet" type="text/css" href="https://gramado.github.io/src/gramado.css"> -->
+<link rel="stylesheet" type="text/css" href="https://gramado.github.io/libs/bootstrap.css">
+
 <!-- jquery lib -->
 <script src="https://gramado.github.io/libs/jquery-3.3.1.js"></script>
 
 <script>
+var status = 0;
 $(document).ready ( function (){
 	
-	$("#effect").click ( function (){
+    if (status == 1)
+    {
+        $("#effect").click ( function (){
         
-		$("textarea").toggleClass("important");
-		$("#ft1").css("color", "yellow");
+		$("textarea").toggleClass("not_important");
+		$("#ft1").css("color", "black");
 
-		$("#bar1").slideUp(2000);
+		$("#bar1").slideUp (2000);
 		
 		/* 
 		$("textarea").toggleClass("important");	
@@ -22,7 +29,30 @@ $(document).ready ( function (){
         text1.animate({fontSize: '3em'}, "slow");	
 		$("#ft1").css("color", "red").slideUp(2000).slideDown(2000);
         */
-	});
+	    });   
+        status = 0;
+        return 0;     
+    }
+    else{
+
+        $("#effect").click ( function (){
+        
+		$("textarea").toggleClass("important");
+		$("#ft1").css("color", "yellow");
+
+		$("#bar1").slideUp (2000);
+		
+		/* 
+		$("textarea").toggleClass("important");	
+        var text1 = $("textarea");  
+        text1.animate({left: '100px'}, "slow");
+        text1.animate({fontSize: '3em'}, "slow");	
+		$("#ft1").css("color", "red").slideUp(2000).slideDown(2000);
+        */
+	    });
+    }
+
+
 });
 </script>
 
@@ -30,13 +60,16 @@ $(document).ready ( function (){
 .important {
     font-weight: bold;
     font-size: xx-large;
-    background-color:#125FD2;
+    background-color:blue;
+}
+.not_important {
+    font-weight: normal;
+    font-size: xx-large;
+    background-color:white;
 }
 </style>
 
-<!-- Custom style for this page -->    
-<!-- <link rel="stylesheet" type="text/css" href="https://gramado.github.io/src/gramado.css"> -->
-<link rel="stylesheet" type="text/css" href="https://gramado.github.io/libs/bootstrap.css">
+
 
 </head>
 
