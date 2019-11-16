@@ -16,6 +16,15 @@
 <link rel="icon" href="/images/favicon-16x16.png" type="image/png" sizes="16x16">
 <link rel="manifest" href="manifest.json">
 
+
+<script>
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+</script>
+
 <link rel="canonical" href="https://gramado.github.io/tutorials/pt/" />
 <link rel="stylesheet" type="text/css" href="https://gramado.github.io/libs/bootstrap.css">
 </head>
@@ -53,13 +62,15 @@
 
       <!--Post-->
       <br>
-      <li class="list-group-item iframe-container">
+      <li class="list-group-item">
       <article>
       <div class="post-flag">Tecnologia</div>
       <br><br>
       <a id="post-link" href="https://gramado.github.io/posts/pt/projeto-pessoal/index.html">Descrição do meu projeto pessoal</a>
       <p>
-      <iframe src="https://gramado.github.io/posts/pt/projeto-pessoal/index.html" width="500" height="500"  scrolling="no"></iframe>
+         <div class="resp-container">
+            <iframe class="resp-iframe" src="https://gramado.github.io/posts/pt/projeto-pessoal/index.html" gesture="media"  allow="encrypted-media" allowfullscreen></iframe>
+         </div>
       <br>
       <a href="https://gramado.github.io/posts/pt/projeto-pessoal/index.html"><span>(More...)</span></a>
       </p>
@@ -88,8 +99,8 @@
       </li>	
  
       <!--Post-->
-      <li>
       <br>
+      <li class="list-group-item">
       <article class="post-module">
       <footer>
          <p>
@@ -99,15 +110,17 @@
       </article>
       </li>
 
-    </ul>
-	
-	
-	<!-- Footer -->
-   <br>	
-   <footer class="footer"><p><i>Copyright &copy; 2019 - 
-	   <a href="/about/" target="_self" onclick="initialize()" >Fred Nora</a> | <a href="/sitemap.xml" target="_parent" >XML Mapa do site</a></i>
-	</footer>
 
+      <!-- Footer -->
+      <br>
+      <li class="list-group-item">
+      <article class="post-module">  
+      <footer class="footer"><p><i>Copyright &copy; 2019 - 
+	   <a href="/about/" target="_self" onclick="initialize()" >Fred Nora</a> | <a href="/sitemap.xml" target="_parent" >XML Mapa do site</a></i>
+	   </footer>
+      </article>
+      </li>
+      </ul>
 </div>  
 
 
