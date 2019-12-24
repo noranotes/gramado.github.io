@@ -1,0 +1,44 @@
+<html lang="pt-BR">
+	
+<head>
+<title>Post 4</title>
+</head>
+
+<body bgcolor="#D8D8D8">
+	
+	
+    <center>
+
+    
+    <img src="https://gramado.github.io/images/mm-info.png" alt="Gramado">
+    <h1>Informações sobre a memória.</h1>
+
+    <br><br>Mostrando o que tem em algumas posições da memória física.
+
+    <br>A posição de alguns dos componentes na memória física, depende do tanto de memória instalada no sistema.
+    
+    ---
+    
+    <br><br>A quantidade total de memória é 64 MB porque é o máximo que da pra medir usando o método do cmos.
+    
+    <br>Eu mapeio os 4 primeiros megas do lfb apenas,
+    
+    <br>repare que cada uma dessas regiões possue 4MB de tamanho ... é que dá pra mapear 4MB usando apenas uma pagetable no x86.
+    <br>usando as 1024 entradas de uma pagetable.
+    
+    <br> 8 regiões de 4MB cada dá 32 MB. Essa é a área comprometida. O restante da memória RAM ainda não foi mapeada. O total é 64MB
+    
+    <br>Eu mapiei também o LFB (frontbuffer), mas isso não é memória ram, é a memória de vídeo. A memória de vídeo é grande, mas eu mapeio apenas os primeiros 4MB;
+    
+    <br>Esses três aplicativos aí fazem parte de um ambiente que eu chamo de Gramado Core. São os três aplicativos que vem junto com o kernel. 
+    <br>Eles possuem heap de 4MB cada um para malloc. Os outros aplicativos possuem bem menos.
+    
+    <br>heap pool é um pool de heaps ... quando vou criar um novo processo é só pegar um heap aí nesse pool ... 
+    <br>veja só, esse pool só tem 4MB, é daí que tem que tirar todos os heaps. Então cada processo ficará com o heap pequeno ...
+    <br>No futuro vou melhorar isso.
+    <br>paged pool ;;; esse é um pool de page frames usado par alocação dinâmica; Diferente da kmalloc, a rotina de alocação aloca por quantidade de página. então dá pra alocar muitas páginas de uma vez só ... no limite de 4MB por enquanto ... o alocador retorna o endereço virtual da região alocada ...
+    <br>uso essa rotina para economizar o heap do kernel, que é usado por kmalloc.
+
+    </center>
+</body>
+</html>
