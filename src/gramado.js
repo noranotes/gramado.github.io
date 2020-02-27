@@ -34,9 +34,8 @@
     /* # Step 1 # */
 
     /* Globals */
-
-    //#importante
-    // Esse será o nome do pacote.
+    
+    // This is the name of the package.
     var gramado;
 
     // Variables.
@@ -46,47 +45,44 @@
 
 
 
-	/* # Step 2 # */
-	/* Setup library */
+    /* # Step 2 # */
+    /* Setup library */
+    // Entry point: 
+    // Isso inicializa a biblioteca.
+    // Deve ser chamado apenas uma vez.
 
-    /* Entry point: 
-       Isso inicializa a biblioteca.
-       Isso deve ser chamado apenas uma vez. */
+function gramadoMain (){
 
-    function gramadoMain (){
+    console.log ("gramadoMain: Initializing ...");
 
-        console.log ("gramadoMain");
+    /*document.getElementById("getThis").focus();*/
 
-        /*document.getElementById("getThis").focus();*/
+    gramado = new CreatingGramadoPackage ();
 
-        /* alert("gramadoMain:"); */
+    gramado.admin = new ADMIN ();
+    // ...
 
-        gramado = new CreatingGramadoPackage ();
+    /* Done.*/
+    /* Mensagem sinalizando o fim da inicialização da lib.*/
+    /*gramado.admin.initializedAlert();*/ 
 
-        gramado.admin = new ADMIN ();
-        /* more ...*/
-
-
-        /* Done.*/
-        /* Mensagem sinalizando o fim da inicialização da lib.*/
-        /*gramado.admin.initializedAlert();*/
-        
-        return 0;
-    }
+    console.log ("gramadoMain: Initialized.");
+    return 0;
+}
 
 
-
-    /*Isso cria os 4 classes do pacote gramado*/
+    /* Isso cria os 4 classes do pacote gramado*/
     /* cinco objetos ... que terão vários métodos cada. */
 
-    function CreatingGramadoPackage (){
+function CreatingGramadoPackage (){
 
-        console.log ("Creating package ...");
+    console.log ("Creating package ...");
 
-        this.admin = 0;  /* Admin support */
-    }
+    this.admin = 0;  /* Admin support */
+    //this.??
+    // ...
+ }
 
-    
 
     /* 
      Apontando para os métodos. 
@@ -94,44 +90,40 @@
      Administrando a biblioteca. 
      Essas são as funcionalidades administrativas da biblioteca 
      */
-    function ADMIN (){
+function ADMIN (){
 
-        console.log ("Creating pointers for all methods ...");
+    console.log ("Creating pointers for all methods ...");
 
-        this.validateForm = do_validateForm;
-        this.function1 = do_function1;
-        this.function2 = do_function2;
-        this.function3 = do_function3;
-        this.messageShow = do_messageShow;
-        this.initializedAlert = do_initializedAlert;
-        this.download = do_downloadFile;
-        //this.myFunction = do_myFunction;
-        /*Continua ...*/
-    }
-
-
+    this.validateForm = do_validateForm;
+    this.function1 = do_function1;
+    this.function2 = do_function2;
+    this.function3 = do_function3;
+    this.messageShow = do_messageShow;
+    this.initializedAlert = do_initializedAlert;
+    this.download = do_downloadFile;
+    // this.myFunction = do_myFunction;
+    // ...
+}
 
 
-	/* # Step 3 # */
-
-	/* Methods */
+    /* # Step 3 # */
+    /* Methods */
 
     /*  
         Daqui pra baixo, criaremos os métodos propriamente ditos
-		Obs: Cada método tem um ponteiro para acessá-lo. O ponteiro fica 
+        Obs: Cada método tem um ponteiro para acessá-lo. O ponteiro fica 
         na sua respectiva classe. 
     */
 
     /* Manteremos a ordem */
 
-    
 
-    function do_initializedAlert (){
+function do_initializedAlert (){
 
-        console.log ("Initialized alert!");
-        alert ("do_initializedAlert: Method working ~It's initialized!");
-        return 0;
-    }
+    console.log ("Initialized alert!");
+    //alert ("do_initializedAlert: Method working ~It's initialized!");
+    return 0;
+}
  
 
     /*  
@@ -141,201 +133,190 @@
         outra página /search que também será um mecanismo de pesquisa. 
     */
 
-    function do_validateForm (){
+function do_validateForm (){
 
-        console.log ("Validating form ...");
+    var xHref;
+    var xSave;
+    var str;
+    /*var buffer;*/
+    /*var file_name;*/
+    /* ... */
 
-        var xHref;
-        var xSave;
-        var str;
-        /*var buffer;*/
-        /*var file_name;*/
-        /* ... */
+    console.log ("Validating form ...");
 
-        var url_search = "https://gramado.github.io/search/?search_input=";
+    var url_search = "https://gramado.github.io/search/?search_input=";
 
-        /*alert("do_validateForm: Getting substring ...");*/
+    var GET = window.location.search.substring (14);
 
+    if (GET == ""){
+        document.myForm.search_input.value = "";
+        return 0;
 
-        var GET = window.location.search.substring (14);
+    }else{
+        document.myForm.search_input.value = GET;
+    }
 
-        if (GET == ""){
+    /* validate Form / show link */
+    xSave = document.myForm.search_input.value; 
 
-            document.myForm.search_input.value = "";
-            return 0;
-			
-        }else{
-            document.myForm.search_input.value = GET;
-        }
-
-        /* validate Form / show link */
-
-        xSave = document.myForm.search_input.value; 
-
-	/* Obs: 
-		Essa comparação não funciona, quando a busca é feita em /home.html, pois 
-		a análise é feita pelo js da página /seach.
-        Isso está aqui só para uso futuro.
+    /* Obs: 
+    Essa comparação não funciona, quando a busca é feita em /home.html, 
+    pois a análise é feita pelo js da página /seach.
+    Isso está aqui só para uso futuro.
     */
 
-        str = "https://gramado.github.io/ home"; 
-        var resIndex = str.match(document.myForm.search_input.value);
+    str = "https://gramado.github.io/ home"; 
+    var resIndex = str.match(document.myForm.search_input.value);
 
-        str = "https://gramado.github.io/about fred nora Fred Nora Frederico economist developer author";
-        var resAboutMe = str.match(document.myForm.search_input.value);
+    str = "https://gramado.github.io/about fred nora Fred Nora Frederico economist developer author";
+    var resAboutMe = str.match(document.myForm.search_input.value);
 
-        str = "https://gramado.github.io/projects work kernel gui osdev source";
-        var resProjects = str.match(document.myForm.search_input.value);
+    str = "https://gramado.github.io/projects work kernel gui osdev source";
+    var resProjects = str.match(document.myForm.search_input.value);
 
-        str = "https://gramado.github.io/links social network twitter facebook youtube linkedin";
-        var resLinks = str.match(document.myForm.search_input.value);
+    str = "https://gramado.github.io/links social network twitter facebook youtube linkedin";
+    var resLinks = str.match(document.myForm.search_input.value);
 
-        str = "https://gramado.github.io/contact email business"; 
-        var resContactMe = str.match(document.myForm.search_input.value);
-
-
-        /* 
-         #TODO: 
-         PARSE SOME FILES AND TEXTs TO FIND A RESULT. 
-         */
+    str = "https://gramado.github.io/contact email business"; 
+    var resContactMe = str.match(document.myForm.search_input.value);
 
 
-        /**/
-        if (resIndex == document.myForm.search_input.value)
-        {
-            document.myForm.search_input.value = "index.html";
-        }
+    /* #TODO: PARSE SOME FILES AND TEXTs TO FIND A RESULT. */
 
-        /**/
-        if (resAboutMe == document.myForm.search_input.value)
-        {
-            document.myForm.search_input.value = "about";
-        }
+    /**/
+    if (resIndex == document.myForm.search_input.value){
+        document.myForm.search_input.value = "index.html";
+    }
 
-        /**/
-        if (resProjects == document.myForm.search_input.value)
-        {
-            document.myForm.search_input.value = "projects";
-        }
+    /**/
+    if (resAboutMe == document.myForm.search_input.value){
+        document.myForm.search_input.value = "about";
+    }
 
-        /**/
-        if (resLinks == document.myForm.search_input.value)
-        {
-            document.myForm.search_input.value = "links";
-        }
+    /**/
+    if (resProjects == document.myForm.search_input.value){
+        document.myForm.search_input.value = "projects";
+    }
 
-        /**/
-        if (resContactMe == document.myForm.search_input.value)
-        {
-            document.myForm.search_input.value = "contact";
-        }
+    /**/
+    if (resLinks == document.myForm.search_input.value){
+        document.myForm.search_input.value = "links";
+    }
 
-        xHref = document.myForm.search_input.value;
+    /**/
+    if (resContactMe == document.myForm.search_input.value){
+        document.myForm.search_input.value = "contact";
+    }
 
-
-
-        /* Show formated link */
     
-        document.getElementById ("link1").innerHTML = xSave;
-        document.getElementById ("link1").href = xHref;
-        document.getElementById ("link1").target = "_self";
+    // >>>
+    xHref = document.myForm.search_input.value;
 
 
-        document.myForm.search_input.value = xSave;
+    // Show formated link.
 
-		/* carregar página de /search com input*/
-
-
-		/* alert("~validate input Opening URL."); */
-
-
-
-		/*alert("do_validateForm: debug");*/
-
-		/*#bugbug*/
-		/*this.document.location.href = url_search + xSave; */
-		/*this.document.location.href = "www.google.com";*/
-
-		/*window.open(url_search,"_self",false);*/
-        var myWindow = window.open (url_search + xSave);
-		/*alert("do_validateForm: EXIT");*/
-
-		/* ?? O que acontece ao retornarmos, ??? inicializa a biblioteca quando chega no elemento 'body' ??*/
-		/* return 0; */
-    }
+    // Três características do mesmo elemento.
+    document.getElementById ("link1").innerHTML = xSave;
+    document.getElementById ("link1").href = xHref;
+    document.getElementById ("link1").target = "_self";
 
 
-    //Test 1.
-    function do_function1 (){
+    document.myForm.search_input.value = xSave;
 
-        window.alert ("Testing button 1.");
-        return 0;
-    }
 
-    //Test 2.
-    function do_function2 (){
 
-        window.alert ("Testing button 2.");
-        return 0;
-    }
 
-    //Test 3.
-    function do_function3 (){
+    /* carregar página de /search com input*/
 
-        var txt;
-        var r = confirm ("Press a button!");
+    //??
+    /* alert("~validate input Opening URL."); */
+    /*alert("do_validateForm: debug");*/
+
         
-        if (r == true){
-            txt = "You pressed OK!";
-        }else{
-            txt = "You pressed Cancel!";
-        }
-        
-        window.alert (txt); 
-        return 0;
-    }
+    /*#bugbug*/
+    /*this.document.location.href = url_search + xSave; */
+    /*this.document.location.href = "www.google.com";*/
 
 
-    // Showing some message.
-    function do_messageShow (){
+    var myWindow = window.open (url_search + xSave);
+    /*window.open(url_search,"_self",false);*/
 
-        window.alert (message);
-        return 0;
-    }
+    //?? return 0;
+}
 
- 
 
-    /* Esse método é para baixar um arquivo que foi construído em um form com os inputs 'filename_input' e 'filetext_input'. 
-       Para acionar esse método é usada a função >> gramado.admin.download(); */
-       
-    function do_downloadFile(){
-
-        console.log ("Downloading file ...");
-
-		//file support.
-        var xFileName = "fail";
-        var xFileText = "fail";
-
-		/*alert("go");*/
-
-        xFileName = document.getElementById("fn1").value;
-        xFileText = document.getElementById("ft1").value;
-
-        var pom = document.createElement('a');
-        
-        pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(xFileText));
-        pom.setAttribute('download', xFileName);
-
-        if (document.createEvent){
-
-            var event = document.createEvent('MouseEvents');
-            event.initEvent('click', true, true);
-            pom.dispatchEvent(event);
-        }else{
-            pom.click();
-        }
-
+// Test 1.
+function do_function1 (){
+    window.alert ("Testing button 1.");
     return 0;
 }
+
+// Test 2.
+function do_function2 (){
+    window.alert ("Testing button 2.");
+    return 0;
+}
+
+// Test 3.
+function do_function3 (){
+
+    var txt;
+    var r = confirm ("Press a button!");
+
+    if (r == true){
+        txt = "You pressed OK!";
+    }else{
+        txt = "You pressed Cancel!";
+    }
+
+    window.alert (txt); 
+    return 0;
+}
+
+
+// Showing some message.
+function do_messageShow (message){
+    window.alert (message);
+    return 0;
+}
+
+
+    /* Esse método é para baixar um arquivo 
+       que foi construído em um form 
+       com os inputs 'filename_input' e 'filetext_input'. 
+       Para acionar esse método 
+       é usada a função >> gramado.admin.download(); */
+       
+function do_downloadFile(){
+
+    console.log ("Downloading file ...");
+
+    // File support.
+    var xFileName = "fail";
+    var xFileText = "fail";
+    xFileName = document.getElementById("fn1").value;
+    xFileText = document.getElementById("ft1").value;
+
+    // POM support.  
+    var pom = document.createElement('a');
+    pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(xFileText));
+    pom.setAttribute('download', xFileName);
+
+
+    // Event.
+    if (document.createEvent){
+        var event = document.createEvent('MouseEvents');
+            event.initEvent('click', true, true);
+            pom.dispatchEvent(event);
+
+    }else{
+        pom.click();
+    }
+
+    //done. 
+    console.log("Download done");
+    return 0;
+}
+
 
 
