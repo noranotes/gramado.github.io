@@ -57,9 +57,9 @@ function gramadoMain (){
 
     /*document.getElementById("getThis").focus();*/
 
-    gramado = new CreatingGramadoPackage ();
+    gramado = new CreatingGramadoPackage (1);
 
-    gramado.admin = new ADMIN ();
+    gramado.admin = new ADMIN (1);
     // ...
 
     /* Done.*/
@@ -74,26 +74,35 @@ function gramadoMain (){
     /* Isso cria os 4 classes do pacote gramado*/
     /* cinco objetos ... que terão vários métodos cada. */
 
-function CreatingGramadoPackage (){
 
-    console.log ("Creating package ...");
+class CreatingGramadoPackage(){
 
-    this.admin = 0;  /* Admin support */
+    constructor (status){
+    console.log ("CreatingGramadoPackage class: nothing.");
+
+    this.status = status;
+    //this.admin = 0;  /* Admin support */
     //this.??
     // ...
- }
+    }
+}
 
 
     /* 
+     Creating the class.
      Apontando para os métodos. 
      Todos os métodos começam com 'do_'.
      Administrando a biblioteca. 
      Essas são as funcionalidades administrativas da biblioteca 
      */
-function ADMIN (){
+ 
+class ADMIN(){
 
-    console.log ("Creating pointers for all methods ...");
+    constructor (status){
 
+    console.log ("ADMIN class: cosntructor");
+
+    this.status = status;
     this.validateForm = do_validateForm;
     this.function1 = do_function1;
     this.function2 = do_function2;
@@ -103,6 +112,7 @@ function ADMIN (){
     this.download = do_downloadFile;
     // this.myFunction = do_myFunction;
     // ...
+    }
 }
 
 
